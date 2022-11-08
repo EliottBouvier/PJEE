@@ -24,10 +24,10 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String login=request.getParameter("param1");
+		String id=request.getParameter("param1");
 		String password=request.getParameter("param2");
 		
-		if (login.equals("ING2") && password.equals("ING2pw")){
+		if (id.equals("ING2") && password.equals("ING2pw")){
 			System.out.println("gg");
 			response.sendRedirect("http://localhost:8080/JEE2/successAuthentification.jsp");
 		} else{
