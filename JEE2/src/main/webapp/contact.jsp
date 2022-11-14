@@ -16,19 +16,18 @@
 			</div>
 		<ul class="nav-links">
 			<li><a href=""> Accueil </a></li>
-			<li><a href=""> Nos Cafés </a></li>
-			<li><a href=""> Nos Tasses </a></li>
-			<li><a href=""> Contact </a></li>
-			<li><a href=""> Panier </a></li>
-			<li><a href=""> <i class="fas fa-user"></i> </a></li>
+			<li><a href="http://localhost:8080/JEE2/cafes.jsp"> Nos Cafés </a></li>
+			<li><a href="http://localhost:8080/JEE2/tasse.jsp"> Nos Tasses </a></li>
+			<li><a href="http://localhost:8080/JEE2/contact.jsp"> Contact </a></li>
+			<li><a href="http://localhost:8080/JEE2/panier.jsp"> Panier </a></li>
+			<li><a href="http://localhost:8080/JEE2/authentification.jsp"> <i class="fas fa-user"></i> </a></li>
 
 		</ul>
 		</div>
 	</nav>
 	
 <div class="container1">
-
-    <div class="title">Registration</div>
+    <div class="title"><span>Nous Contacter </span></div>
     <form name="Enregistrement" method="post" action="php/mail.php">
     
         <div class="user-details">
@@ -61,7 +60,9 @@
         </div>
        
     </form>	
-
+    </div>
+    
+<br> <br> <br> <br>
 <div class="footer-dark">
         <footer>
             <div class="container">

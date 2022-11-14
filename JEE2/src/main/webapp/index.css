@@ -8,7 +8,7 @@
 }
 
 body{
-	background-color: wheat ;
+	background-color: #f5efe6;
 }
 
 /* ------------------------ MENU HAUT ------------------------------- */
@@ -25,7 +25,7 @@ nav{
 
 nav.sticky{
 	padding: 15px 20px;
-	background: #F27438; 
+	background: wheat; 
 }
 
 nav .nav-content{
@@ -40,11 +40,11 @@ nav .nav-content{
 .nav-content .logo a{
 	font-size: 35px;
 	font-weight: 500;
-	color: #F27438;
+	color: #88421D;
 }
 
 nav.sticky .nav-content .logo a{
-	color: #F27438;
+	color: #88421D;
 }
 
 .nav-content .nav-links{
@@ -61,19 +61,19 @@ nav.sticky .nav-content .logo a{
 	font-size: 18px;
 	font-weight: 500;
 	padding: 10px 4px;
-	color: #F27438;
+	color: #88421D;
 	transition: all 0.4s ease;
 }
 
 .nav-links li a:hover{
-	color: #93441A;
+	color: wheat;
 }
 
 nav.sticky .nav-links li a{
-	color: #F27438; 
+	color: wheat; 
 }
 nav.sticky .nav-links li a:hover{
-	color: #93441A;
+	color: wheat;
   opacity: 0.3;
 }
 
@@ -139,7 +139,7 @@ nav.sticky .nav-links li a:hover{
 .wrapper{
   width:500px;
   height: 400px;
-  background:  #B67332;
+  background:  #88421D;
   border-radius:5px;
   position: relative;
   margin-top: 10%;
@@ -149,7 +149,7 @@ nav.sticky .nav-links li a:hover{
  
 .wrapper .title{
   line-height: 80px;
-  background: #F27438;
+  background: #88421D;
   padding-left: 30%;
   border-radius: 5px 5px 0 0;
   color: wheat;
@@ -163,7 +163,7 @@ nav.sticky .nav-links li a:hover{
 
 .wrapper form .row{
   height: 45px;
-  background:  #B67332;
+  background:  #88421D;
   margin-bottom:15px;
   position: relative;
 }
@@ -184,7 +184,7 @@ nav.sticky .nav-links li a:hover{
   height: 100% ;
   color: wheat;
   font-size: 18px;
-  background: #F27438;
+  background: #88421D;
   border:  1px solid wheat;
   border-radius: 5px 0 0 5px;
   display: flex;
@@ -198,7 +198,7 @@ nav.sticky .nav-links li a:hover{
   font-size:18px;
   color:wheat;
   padding-left: 0px;
-  background: #F27438;
+  background: #88421D;
   border: 1px solid wheat;
   cursor: pointer;
 }
@@ -219,22 +219,24 @@ nav.sticky .nav-links li a:hover{
   max-width: 700px;
   width: 100%;
   height: 500px;
-  background: white;
+  background: #88421D;
   padding: 25px 25px 25px 25px;
   border-radius: 10px;
  
 }
 
 .container1 .title{
+  line-height: 80px;
   position: static;
-  font-size: 25px;
-  font-weight: 500;
-  padding: 5px 40%;
-  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+  padding-left: 30%;
+  color: wheat;
 }
 
 .container1 form{
-  color: white;
+  color: wheat;
   padding-left: 5px;
   height: 400px;
 }
@@ -244,7 +246,6 @@ nav.sticky .nav-links li a:hover{
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px 0 12px 0;
- 
 }
 
 form .user-details .input-box{
@@ -291,13 +292,13 @@ form .button input{
   height: 100%;
   width: 100%;
   outline: none;
-  color: white;
-  border: none;
+  color: wheat;
+  border: 1px solid wheat;
   font-size: 18px;
   font-weight: 500;
   border-radius: 5px;
   letter-spacing: 1px;
-  background: #707479;
+  background: #88421D;
 }
 
 form .button #reset{
@@ -306,7 +307,7 @@ margin-top: 15px;
 
 
 form .button input:hover{
-  background: white;
+  background: wheat;
   color: black;
 }
 
@@ -316,7 +317,7 @@ form .button input:hover{
 .footer-dark {
   padding:50px 0;
   color:wheat;
-  background-color:#B67332;
+  background-color:#88421D;
   padding-left: 15%;
   margin-bottom: auto;
 }
@@ -344,7 +345,7 @@ form .button input:hover{
 }
 
 .footer-dark ul a:hover {
-  color: white;
+  color: wheat;
   opacity: 0.3;
 }
 
