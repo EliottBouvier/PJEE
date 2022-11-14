@@ -25,9 +25,9 @@ public class LoginServlet extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id=request.getParameter("param1");
-		String password=request.getParameter("param2");
+		String mdp=request.getParameter("param2");
 		
-		if (id.equals("ING2") && password.equals("ING2pw")){
+		if (id.equals("ING2") && mdp.equals("ING2pw")){
 			System.out.println("gg");
 			response.sendRedirect("http://localhost:8080/JEE2/successAuthentification.jsp");
 		} else{
@@ -40,10 +40,10 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String login=request.getParameter("param1");
-		String password=request.getParameter("param2");
+		String id=request.getParameter("param1");
+		String mdp=request.getParameter("param2");
 		
-		if (login == "ING2" && password == "ING2pw"){
+		if (id == "ING2" && mdp == "ING2pw"){
 			System.out.println("gg");
 			//response.sendRedirect("http://localhost:8080/JEE2/successAuthentification.jsp");
 			//System.out.println(login);

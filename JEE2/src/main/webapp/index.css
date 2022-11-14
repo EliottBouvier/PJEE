@@ -11,7 +11,7 @@ body{
 	background-color: wheat ;
 }
 
-/* ------------------------------------------------------- */
+/* ------------------------ MENU HAUT ------------------------------- */
 
 nav{
 	position: sticky;
@@ -70,7 +70,7 @@ nav.sticky .nav-content .logo a{
 }
 
 nav.sticky .nav-links li a{
-	color: #F27438;
+	color: #F27438; 
 }
 nav.sticky .nav-links li a:hover{
 	color: #93441A;
@@ -79,44 +79,7 @@ nav.sticky .nav-links li a:hover{
 
 /* ------------------------------------------------------------ */
 
-.wrapper2{
-  height: 90%;
-  width: 330px;
-  position: relative;
-}
 
-.wrapper2 .menu-btn{
-  position: fixed;
-  top: 24px;
-  left: 100px;
-  height: 35px;
-  width: 45px;
-  z-index: 999;
-  color: #f0f0f0;
-  background: #373f47;
-  border: 1px solid #333;
-  text-align: center;
-  line-height: 32.5px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 23px;
-  transition: all 0.3 ease;
-}
-
-input[type="checkbox"]{
-  display: none;
-}
-
-#btn:checked ~ .menu-btn{
-  left: 247px;
-}
-
-#btn:checked ~ .menu-btn i:before{
-  content: "\f00d";
-}
-
-
-/* --------------------------------------------------------------- */
 /*Dimensionnage photos*/
 #slide img{
   width: 500px;
@@ -165,77 +128,18 @@ input[type="checkbox"]{
   padding-bottom: 3%;
 
 }
-@keyframes glissade {
-  0% {
-    transform: translateX(0);
-
-  }
-
-  8% {
-    transform: translateX(0);
-
-  }
-
-  16% {
-    transform: translateX(-500px);
-
-  }
-
-  24% {
-    transform: translateX(-500px);
-
-  }
-
-  32% {
-    transform: translateX(-1000px);
-
-  }
-  40% {
-    transform: translateX(-1000px);
-
-  }
-  48% {
-    transform: translateX(-1500px);
-
-  }
-  56% {
-    transform: translateX(-1500px);
-
-  }
-  64%{
-    transform: translateX(-2000px);
-
-  }
-  72% {
-    transform: translateX(-2000px);
-
-  }
-  80%{
-    transform: translateX(-2500px);
-
-  }
-  87%{
-    transform: translateX(-2500px);
-  }
-  100%{
-    transform: translateX(0);
-  }
-  
-}
-
-
 
 .bloc2 .texte2{
 	text-align: center;
   color: white;
 }
 
-/* ---------------------------------------------------------------- */
+/* --------------------------- BOITE DE CONNEXION ------------------------------------- */
 
 .wrapper{
   width:500px;
   height: 400px;
-  background: #373f47;
+  background:  #B67332;
   border-radius:5px;
   position: relative;
   margin-top: 10%;
@@ -245,10 +149,10 @@ input[type="checkbox"]{
  
 .wrapper .title{
   line-height: 80px;
-  background: #373f47;
+  background: #F27438;
   padding-left: 30%;
   border-radius: 5px 5px 0 0;
-  color: white;
+  color: wheat;
   font-size:25px;
   font-weight:600;
 }
@@ -259,7 +163,7 @@ input[type="checkbox"]{
 
 .wrapper form .row{
   height: 45px;
-  background: #373f47;
+  background:  #B67332;
   margin-bottom:15px;
   position: relative;
 }
@@ -270,7 +174,7 @@ input[type="checkbox"]{
   outline:none;
   padding-left: 60px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid wheat;
   font-size:16px;
 }
 
@@ -278,10 +182,10 @@ input[type="checkbox"]{
   position: absolute;
   width: 47px;
   height: 100% ;
-  color: white;
+  color: wheat;
   font-size: 18px;
-  background: #707479;
-  border:  1px solid black;
+  background: #F27438;
+  border:  1px solid wheat;
   border-radius: 5px 0 0 5px;
   display: flex;
   align-items: center;
@@ -292,12 +196,13 @@ input[type="checkbox"]{
   margin-top: 50px;
   font-weight: 500;
   font-size:18px;
-  color:white;
+  color:wheat;
   padding-left: 0px;
-  background: #707479;
-  border: 1px solid black;
+  background: #F27438;
+  border: 1px solid wheat;
   cursor: pointer;
 }
+/*-----------------------------------------------------------------*/
 
 .erreur{
   color: white;
@@ -306,9 +211,107 @@ input[type="checkbox"]{
 
 }
 
+/*--------------------------- PAGE DE CONTACT -----------------------------------*/
+
+.container1{
+  margin-top: 5%;
+  margin-left: 31%;
+  max-width: 700px;
+  width: 100%;
+  height: 500px;
+  background: white;
+  padding: 25px 25px 25px 25px;
+  border-radius: 10px;
+ 
+}
+
+.container1 .title{
+  position: static;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 5px 40%;
+  color: white;
+}
+
+.container1 form{
+  color: white;
+  padding-left: 5px;
+  height: 400px;
+}
+
+.container1 form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+ 
+}
+
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% /2 - 20px);
+}
+
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 4px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:valid{
+  border-color: green;
+}
+
+.user-details .input-box input:focus {
+  border-color: black;
+}
+
+.user-details .input-box input:invalid{
+  border-color: red;
+}
+
+form .button{
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .button input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: #707479;
+}
+
+form .button #reset{
+margin-top: 15px;
+}
 
 
-/* --------------------------------------------------------- */
+form .button input:hover{
+  background: white;
+  color: black;
+}
+
+
+/* --------------------- FOOTER ------------------------------------ */
 
 .footer-dark {
   padding:50px 0;
