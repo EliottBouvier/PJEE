@@ -79,13 +79,6 @@ nav.sticky .nav-links li a:hover{
 
 /* ------------------------------------------------------------ */
 
-
-/*Dimensionnage photos*/
-#slide img{
-  width: 500px;
-  height: 281px; /*Largeur des photos*/
-}
-
 .bloc1{
 	margin-top: 7%;
 	margin-left: 20%;
@@ -210,6 +203,32 @@ nav.sticky .nav-links li a:hover{
   padding: 6% 0 0 0;
 
 }
+
+/*--------------------------- PAGE DE CAFE -----------------------------------*/
+
+.parent {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 20px;
+margin-left: 7%;
+margin-top: 7%;
+
+}
+
+.parent img{
+width: 500px;
+height: 300px; 
+}
+
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 2 / 1 / 3 / 2; }
+.div5 { grid-area: 2 / 2 / 3 / 3; }
+.div6 { grid-area: 2 / 3 / 3 / 4; }
 
 /*--------------------------- PAGE DE CONTACT -----------------------------------*/
 

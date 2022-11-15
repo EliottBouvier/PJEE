@@ -26,23 +26,40 @@
 		</div>
 	</nav>
 	
-<div class="wrapper">
-	<div class="title"> <span>Authentification</span></div>
-	<form method="get" action="http://localhost:8080/JEE2/LoginServlet">
-	<div class="row">
-			<i class="fas fa-user"></i>
-			<input type="text" name="id" id="id" placeholder="Email ou téléphone" maxlength="20" required>
-		</div>
-		<div class="row">
-			<i class="fas fa-lock"></i>
-			<input type="password" name="mdp" id="mdp" placeholder="Mot de passe" maxlength="20" required >
-		</div>
-		<div class="row button">
-			<input type="submit" value="Connexion">
-		</div>
-		<button>Effacer</button>
-	</form>
+<div class="parent">
+
+	<div class="div1"> 
+	<img class="photox1" src="https://graindesail.com/900-home_default/cafe-de-colombie-pitalito.jpg">
+	<p> Arabica : Café Origine Colombie </p>
+	</div>
+	
+	<div class="div2">
+	<img class="photox1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg">
+	<p> Arabica: Café de Paris </p>
+	</div>
+	
+	<div class="div3">
+	<img class="photox1" src="https://factum-info.net/images/1_Fakty/5_Raznoe/34_2_kopi-luwak-1.jpg">
+	<p> Kowi Luwak: Café sensation Sahara </p> 
+	</div>
+	
+	<div class="div4"> 
+	<img class="photox1" src="https://www.monsieurcafe.org/wp-content/uploads/2017/08/monsieur_cafe_guide_cafe_moulu.jpg">
+	<p> Robusta : Café </p>
+	</div>
+	
+	<div class="div5"> 
+	<img class="photox1" src="https://media1.coffee-webstore.com/img/cms/Blog/2020/11%20-%20NOVEMBRE/caf%C3%A9-en-grains-espresso.jpg">
+	<p> Arabica : café matin légé </p>
+	</div>
+	
+	<div class="div6">
+	<img class="photox1" src="https://occitanie-cafe.fr/img/cms/cafe-bio-machine-tasse-grain-capsule-occitanie.jpg"> 
+	<p> Robusta: Café noir corsé </p>
+	</div>
+	
 </div>
+<br> <br> <br>
 <div class="footer-dark">
         <footer>
             <div class="container">
