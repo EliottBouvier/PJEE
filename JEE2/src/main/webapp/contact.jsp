@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Authentification</title>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/JEE2/index.css">
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/JEE2/css/index.css">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
