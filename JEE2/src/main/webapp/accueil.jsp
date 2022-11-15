@@ -1,32 +1,34 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/JEE2/testons.css">
+<meta charset="ISO-8859-1">
+<title>Authentification</title>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/JEE2/css/index.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-<nav>
+	<nav>
 		<div class="nav-content">
 			<div class="logo">
 				<a href="#"> Kahoueh. </a>
 			</div>
 		<ul class="nav-links">
-			<li><a href=""> Accueil </a></li>
-			<li><a href=""> Nos Cafés </a></li>
-			<li><a href=""> Nos Tasses </a></li>
-			<li><a href=""> Contact </a></li>
-			<li><a href=""> Panier </a></li>
-			<li><a href=""> <i class="fas fa-user"></i> </a></li>
+			<li><a href="http://localhost:8080/JEE2/accueil.jsp"> Accueil </a></li>
+			<li><a href="http://localhost:8080/JEE2/cafes.jsp"> Nos Caf�s </a></li>
+			<li><a href="http://localhost:8080/JEE2/tasse.jsp"> Nos Tasses </a></li>
+			<li><a href="http://localhost:8080/JEE2/contact.jsp"> Contact </a></li>
+			<li><a href="http://localhost:8080/JEE2/panier.jsp"> Panier </a></li>
+			<li><a href="http://localhost:8080/JEE2/authentification.jsp"> <i class="fas fa-user"></i> </a></li>
 
 		</ul>
 		</div>
-</nav>
-
+	</nav>
+	
 <div class="carousel">
   <div class="carousel-inner">
-    <!-- Bloco da imagem 1 -->
+    
     <input
       class="carousel-open"
       type="radio"
@@ -41,7 +43,7 @@
         src="images/cafe1.jpg"
       />
     </div>
-    <!-- Bloco da imagem 2 -->
+ 
     <input
       class="carousel-open"
       type="radio"
@@ -55,7 +57,7 @@
         src="images/cafe2.jpg"
       />
     </div>
-    <!-- Bloco da imagem 3 -->
+   
     <input
       class="carousel-open"
       type="radio"
@@ -70,41 +72,36 @@
       />
     </div>
 
-    <!-- Pode adicionar mais blocos de imagens aqui -->
-
-    <!-- Adicionar o prev de acordo com a quantidade de páginas que adicionar -->
-    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-    <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-    <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-    <!-- Adicionar o next de acordo com a quantidade de páginas que adicionar -->
-    <label for="carousel-1" class="carousel-control next control-3">›</label>
-    <label for="carousel-2" class="carousel-control next control-1">›</label>
-    <label for="carousel-3" class="carousel-control next control-2">›</label>
-    <!-- 
-        Abaixo são os indicadores da página ativa. Se não quiser basta remover. 
-        E caso adicione mais páginas, é preciso adicionar mais itens e alterar 
-        a numeração 
-    -->
+    <label for="carousel-1" class="carousel-control prev control-2"> < </label>
+    <label for="carousel-2" class="carousel-control prev control-3"> < </label>
+    <label for="carousel-3" class="carousel-control prev control-1"> < </label>
+   
+    <label for="carousel-1" class="carousel-control next control-3"> > </label>
+    <label for="carousel-2" class="carousel-control next control-1"> > </label>
+    <label for="carousel-3" class="carousel-control next control-2"> > </label>
+    
     <ol class="carousel-indicators">
       <li>
-        <label for="carousel-1" class="carousel-bullet">•</label>
+        <label for="carousel-1" class="carousel-bullet"> . </label>
       </li>
       <li>
-        <label for="carousel-2" class="carousel-bullet">•</label>
+        <label for="carousel-2" class="carousel-bullet"> . </label>
       </li>
       <li>
-        <label for="carousel-3" class="carousel-bullet">•</label>
+        <label for="carousel-3" class="carousel-bullet"> . </label>
       </li>
     </ol>
   </div>
 </div>
+
+<br> <br> <br>
 
 <div class="footer-dark">
         <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>Nos réseaux</h3>
+                        <h3>Nos r�seaux</h3>
                         <ul>
                             <li><a href="https://www.facebook.com/">Facebook</a></li>
                             <li><a href="https://twitter.com/home?lang=fr">Twitter</a></li>
@@ -117,9 +114,12 @@
                         <p>.</p>
                     </div> 
                 </div>
-                <p class="copyright"> Kahoueh Industries © 2022  </p>
+                <p class="copyright"> Kahoueh Industries � 2022  </p>
             </div>
         </footer>
 </div>
+
+<script src="nav.js"></script>
+
 </body>
 </html>

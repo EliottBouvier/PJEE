@@ -10,3 +10,4 @@
 	<h1>Echec à l'authentification</h1>
 </body>
 </html>
+

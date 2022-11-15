@@ -15,7 +15,7 @@
 				<a href="#"> Kahoueh. </a>
 			</div>
 		<ul class="nav-links">
-			<li><a href=""> Accueil </a></li>
+			<li><a href="http://localhost:8080/JEE2/accueil.jsp"> Accueil </a></li>
 			<li><a href="http://localhost:8080/JEE2/cafes.jsp"> Nos Cafés </a></li>
 			<li><a href="http://localhost:8080/JEE2/tasse.jsp"> Nos Tasses </a></li>
 			<li><a href="http://localhost:8080/JEE2/contact.jsp"> Contact </a></li>
