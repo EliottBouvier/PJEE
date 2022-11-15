@@ -62,7 +62,7 @@
     </form>	
     </div>
     
-<br> <br> <br> <br>
+<br> <br> <br> <br> <br>
 <div class="footer-dark">
         <footer>
             <div class="container">
@@ -85,5 +85,8 @@
             </div>
         </footer>
 </div>
+
+<script src="nav.js"></script>
+
 </body>
 </html>

@@ -65,5 +65,8 @@
             </div>
         </footer>
 </div>
+
+<script src="nav.js"></script>
+
 </body>
 </html>
