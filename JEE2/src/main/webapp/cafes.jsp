@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Authentification</title>
 <link rel="stylesheet" type="text/css" href="http://localhost:8080/JEE2/css/index.css">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -16,7 +16,7 @@
 			</div>
 		<ul class="nav-links">
 			<li><a href="http://localhost:8080/JEE2/accueil.jsp"> Accueil </a></li>
-			<li><a href="http://localhost:8080/JEE2/cafes.jsp"> Nos Cafés </a></li>
+			<li><a href="http://localhost:8080/JEE2/cafes.jsp"> Nos CafÃ©s </a></li>
 			<li><a href="http://localhost:8080/JEE2/tasse.jsp"> Nos Tasses </a></li>
 			<li><a href="http://localhost:8080/JEE2/contact.jsp"> Contact </a></li>
 			<li><a href="http://localhost:8080/JEE2/panier.jsp"> Panier </a></li>
@@ -30,32 +30,48 @@
 
 	<div class="div1"> 
 	<img class="photox1" src="https://graindesail.com/900-home_default/cafe-de-colombie-pitalito.jpg">
-	<p> Arabica : Café Origine Colombie </p>
+	<p> Arabica : CafÃ© Origine Colombie </p>
+		
+		<div class="divQP">
+			<div class="btnQuantite">
+			<span class="minus">-</span>
+			<span class="num">01</span>
+			<span class="plus">+</span>
+			</div>
+			
+			<div class="boitePrix">
+			<span class="prix"> 12â‚¬ </span>
+			</div>
+		</div>
+		<div class="ajouterPanier">
+		<input type="submit" value="Ajouter au panier">
+		</div>
+	
 	</div>
 	
 	<div class="div2">
 	<img class="photox1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg">
-	<p> Arabica: Café de Paris </p>
+	<p> Arabica: CafÃ© de Paris </p>
 	</div>
 	
 	<div class="div3">
 	<img class="photox1" src="https://factum-info.net/images/1_Fakty/5_Raznoe/34_2_kopi-luwak-1.jpg">
-	<p> Kowi Luwak: Café sensation Sahara </p> 
+	<p> Kowi Luwak: CafÃ© sensation Sahara </p> 
 	</div>
 	
 	<div class="div4"> 
 	<img class="photox1" src="https://www.monsieurcafe.org/wp-content/uploads/2017/08/monsieur_cafe_guide_cafe_moulu.jpg">
-	<p> Robusta : Café </p>
+	<p> Robusta : CafÃ© </p>
 	</div>
 	
 	<div class="div5"> 
 	<img class="photox1" src="https://media1.coffee-webstore.com/img/cms/Blog/2020/11%20-%20NOVEMBRE/caf%C3%A9-en-grains-espresso.jpg">
-	<p> Arabica : café matin légé </p>
+	<p> Arabica : cafÃ© matin lÃ©gÃ© </p>
 	</div>
 	
 	<div class="div6">
 	<img class="photox1" src="https://occitanie-cafe.fr/img/cms/cafe-bio-machine-tasse-grain-capsule-occitanie.jpg"> 
-	<p> Robusta: Café noir corsé </p>
+	<p> Robusta: CafÃ© noir corsÃ© </p>
 	</div>
 	
 </div>
@@ -65,7 +81,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>Nos réseaux</h3>
+                        <h3>Nos rÃ©seaux</h3>
                         <ul>
                             <li><a href="https://www.facebook.com/">Facebook</a></li>
                             <li><a href="https://twitter.com/home?lang=fr">Twitter</a></li>
@@ -78,7 +94,7 @@
                         <p>.</p>
                     </div> 
                 </div>
-                <p class="copyright"> Kahoueh Industries © 2022  </p>
+                <p class="copyright"> Kahoueh Industries Â© 2022  </p>
             </div>
         </footer>
 </div>
