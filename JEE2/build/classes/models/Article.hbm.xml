@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 nov. 2022 ? 15:31:58 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="models.Article" table="Article" catalog="kahoueh" optimistic-lock="version">
+        <id name="artId" type="java.lang.Integer">
+            <column name="artID" />
+            <generator class="identity" />
+        </id>
+        <property name="artPrix" type="float">
+            <column name="artPrix" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="artStock" type="int">
+            <column name="artStock" not-null="true" />
+        </property>
+        <property name="artImg" type="string">
+            <column name="artImg" not-null="true" />
+        </property>
+        <property name="artDesc" type="string">
+            <column name="artDesc" not-null="true" />
+        </property>
+        <property name="artTauxTva" type="float">
+            <column name="artTauxTVA" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="artMarque" type="int">
+            <column name="artMarque" not-null="true" />
+        </property>
+        <property name="artCategorie" type="java.lang.Integer">
+            <column name="artCategorie" />
+        </property>
+    </class>
+</hibernate-mapping>

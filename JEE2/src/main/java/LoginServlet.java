@@ -1,4 +1,6 @@
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,33 +8,36 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.Session;
+
+import models.Utilisateur;
+
 /**
  * Servlet implementation class LoginServlet
  */
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
     /**
      * Default constructor. 
      */
     public LoginServlet() {
-        // TODO Auto-generated constructor stub
+
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id=request.getParameter("param1");
-		String mdp=request.getParameter("param2");
-		
-		if (id.equals("ING2") && mdp.equals("ING2pw")){
+		String id=request.getParameter("id");
+		String mdp=request.getParameter("mdp");
+		Utilisateur utilisateur = this.getUtilisateur(id, mdp);
+		if (utilisateur != null){
 			System.out.println("gg");
-			response.sendRedirect("http://localhost:8080/JEE2/successAuthentification.jsp");
+			response.sendRedirect("accueil.jsp");
 		} else{
 			System.out.println("rip");
-			response.sendRedirect("http://localhost:8080/JEE2/failedAuthentification.jsp");
+			response.sendRedirect("accueil.jsp");
 		}
 	}
 
@@ -56,4 +61,19 @@ public class LoginServlet extends HttpServlet {
 		}
 	}
 
+    public Utilisateur getUtilisateur(String id, String password)
+    {
+        Session session= HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        List<Utilisateur> result = session.createQuery("from Utilisateur where utilMail = '" + id + "' AND utilPassword = '" + password + "'").list();
+        session.close();
+
+        Utilisateur utilisateur = null;
+
+        if ( result.isEmpty() == false) {
+        	utilisateur = result.get(0);
+        }
+
+        return utilisateur;
+    }
 }

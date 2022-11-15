@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 nov. 2022 ? 15:31:58 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="models.Utilisateur" table="Utilisateur" catalog="kahoueh" optimistic-lock="version">
+        <id name="utilId" type="java.lang.Integer">
+            <column name="utilID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="role" class="models.Role" fetch="select">
+            <column name="utilRole" not-null="true" />
+        </many-to-one>
+        <property name="utilMail" type="string">
+            <column name="utilMail" not-null="true" />
+        </property>
+        <property name="utilPassword" type="string">
+            <column name="utilPassword" not-null="true" />
+        </property>
+        <property name="utilNom" type="string">
+            <column name="utilNom" not-null="true" />
+        </property>
+        <property name="utilPrenom" type="string">
+            <column name="utilPrenom" not-null="true" />
+        </property>
+        <property name="utilTel" type="string">
+            <column name="utilTel" not-null="true" />
+        </property>
+        <property name="utilAddresse" type="string">
+            <column name="utilAddresse" not-null="true" />
+        </property>
+        <property name="utilCp" type="string">
+            <column name="utilCP" not-null="true" />
+        </property>
+        <property name="utilVille" type="string">
+            <column name="utilVille" not-null="true" />
+        </property>
+        <property name="utilCb" type="string">
+            <column name="utilCB" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

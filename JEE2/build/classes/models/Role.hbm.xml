@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 nov. 2022 ? 15:31:58 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="models.Role" table="Role" catalog="kahoueh" optimistic-lock="version">
+        <id name="idRole" type="java.lang.Integer">
+            <column name="idRole" />
+            <generator class="identity" />
+        </id>
+        <property name="nameRole" type="string">
+            <column name="nameRole" not-null="true" />
+        </property>
+        <set name="utilisateurs" table="Utilisateur" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="utilRole" not-null="true" />
+            </key>
+            <one-to-many class="models.Utilisateur" />
+        </set>
+    </class>
+</hibernate-mapping>

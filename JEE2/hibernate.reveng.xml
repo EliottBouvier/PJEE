@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+
+	<table-filter match-schema="kahoueh" match-name=".*" />
+	<table-filter match-catalog="kahoueh" match-name="Article" />
+	<table-filter match-catalog="kahoueh" match-name="Categorie" />
+	<table-filter match-catalog="kahoueh" match-name="Commande" />
+	<table-filter match-catalog="kahoueh" match-name="EtatCommande" />
+	<table-filter match-catalog="kahoueh" match-name="Facture" />
+	<table-filter match-catalog="kahoueh" match-name="Marque" />
+	<table-filter match-catalog="kahoueh" match-name="Role" />
+	<table-filter match-catalog="kahoueh" match-name="Utilisateur" />
+	<table catalog="kahoueh" name="Article">
+		<column name="artID"></column>
+		<column name="artImg"></column>
+		<column name="artMarque"></column>
+		<column name="artCategorie"></column>
+		<column name="artStock"></column>
+		<column name="artTauxTVA"></column>
+		<column name="artPrix"></column>
+		<column name="artDesc"></column>
+	</table>
+	<table catalog="kahoueh" name="Categorie">
+		<column name="catID"></column>
+		<column name="catNom"></column>
+	</table>
+	<table catalog="kahoueh" name="Commande">
+		<column name="cmdID"></column>
+		<column name="cmdEtat"></column>
+		<column name="cmdPrix"></column>
+		<column name="cmdNbArt"></column>
+		<column name="cmdArticles"></column>
+		<column name="cmdUtil"></column>
+		<column name="cmdDate"></column>
+		<column name="cmdDesc"></column>
+	</table>
+	<table catalog="kahoueh" name="EtatCommande">
+		<column name="etatcmdID"></column>
+		<column name="etatcmdDesc"></column>
+	</table>
+	<table catalog="kahoueh" name="Facture">
+		<column name="factID"></column>
+		<column name="factTVA"></column>
+		<column name="factHT"></column>
+		<column name="factDate"></column>
+		<column name="factTTC"></column>
+	</table>
+	<table catalog="kahoueh" name="Marque">
+		<column name="marqueID"></column>
+		<column name="marqueNom"></column>
+	</table>
+	<table catalog="kahoueh" name="Role">
+		<column name="idRole"></column>
+		<column name="nameRole"></column>
+	</table>
+	<table catalog="kahoueh" name="Utilisateur">
+		<column name="utilID"></column>
+		<column name="utilAddresse"></column>
+		<column name="utilRole"></column>
+		<column name="utilCB"></column>
+		<column name="utilPrenom"></column>
+		<column name="utilVille"></column>
+		<column name="utilPassword"></column>
+		<column name="utilNom"></column>
+		<column name="utilMail"></column>
+		<column name="utilTel"></column>
+		<column name="utilCP"></column>
+	</table>
+</hibernate-reverse-engineering>

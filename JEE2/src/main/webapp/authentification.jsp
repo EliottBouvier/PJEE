@@ -28,14 +28,14 @@
 	
 <div class="wrapper">
 	<div class="title"> <span>Authentification</span></div>
-	<form method="get" action="http://localhost:8080/JEE2/LoginServlet">
+	<form method="get" action="LoginServlet">
 	<div class="row">
 			<i class="fas fa-user"></i>
-			<input type="text" name="id" id="id" placeholder="Email ou téléphone" maxlength="20" required>
+			<input type="text" name="id" id="id" placeholder="Email ou téléphone" maxlength="200" required>
 		</div>
 		<div class="row">
 			<i class="fas fa-lock"></i>
-			<input type="password" name="mdp" id="mdp" placeholder="Mot de passe" maxlength="20" required >
+			<input type="password" name="mdp" id="mdp" placeholder="Mot de passe" maxlength="200" required >
 		</div>
 		<div class="row button">
 			<input type="submit" value="Connexion">

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">P@ssw0rd</property>
+        <property name="hibernate.connection.url">jdbc:mysql://185.171.202.213:3306/kahoueh?characterEncoding=latin1</property>
+        <property name="hibernate.connection.username">username</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <mapping class="models.Article" />
+    	<mapping class="models.Categorie" />
+	    <mapping class="models.Commande" />
+	    <mapping class="models.EtatCommande" />
+	    <mapping class="models.Facture" />
+	    <mapping class="models.Marque" />
+	    <mapping class="models.Role" />
+	    <mapping class="models.Utilisateur" />
+    </session-factory>
+</hibernate-configuration>

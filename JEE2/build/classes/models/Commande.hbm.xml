@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 nov. 2022 ? 15:31:58 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="models.Commande" table="Commande" catalog="kahoueh" optimistic-lock="version">
+        <id name="cmdId" type="java.lang.Integer">
+            <column name="cmdID" />
+            <generator class="identity" />
+        </id>
+        <property name="cmdDate" type="date">
+            <column name="cmdDate" length="10" not-null="true" />
+        </property>
+        <property name="cmdPrix" type="float">
+            <column name="cmdPrix" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="cmdNbArt" type="int">
+            <column name="cmdNbArt" not-null="true" />
+        </property>
+        <property name="cmdDesc" type="string">
+            <column name="cmdDesc" not-null="true" />
+        </property>
+        <property name="cmdArticles" type="string">
+            <column name="cmdArticles" not-null="true" />
+        </property>
+        <property name="cmdEtat" type="int">
+            <column name="cmdEtat" not-null="true" />
+        </property>
+        <property name="cmdUtil" type="int">
+            <column name="cmdUtil" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
