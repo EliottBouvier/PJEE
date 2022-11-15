@@ -102,26 +102,79 @@
 
 <div class="cont">
 	<div class="txtacc">
-	<p>Crée en 2015 Kahoueh est un revendeur de café en vrac unique. Nous proposons des café moulus ou en grain. Un large panel de cafés s’offre à vous : arabica, Robusta, et même le fameux et prisé Kowi Luwak. Vous trouverez des cafés des 4 coins du monde pour un choix de saveurs toujours plus diversifié.
-Dès le début, nous avons fait le choix de privilégier la qualité de nos produits. Pour cela Kahoueh s’engage à utiliser des fournisseurs Bio sur la totalité des produits proposé.
-De plus nous avons développé plusieurs partenariats avec des fournisseurs Sud-Americain et Africain de confiance qui nous accompagne depuis nos débuts.
-Nos cafés sont ensuite torréfié dans nos installations proches de Paris. 
-Kahoueh s’engage dans une démarche éco-responsable et garantie des cafés issus du commerce équitable.
-</p>
+	<br>
+	<br>
+	<p style="text-align: center;"><span style="font-family: georgia, palatino, serif; color: #800000;">Cr&eacute;e en 2015 Kahoueh est un revendeur de caf&eacute; en vrac unique.</span></p>
+<p style="text-align: center;"><span style="font-family: georgia, palatino, serif; color: #800000;">Nous proposons des caf&eacute; moulus ou en grain. Un large panel de caf&eacute;s s&rsquo;offre &agrave; vous : arabica, Robusta, et m&ecirc;me le fameux et pris&eacute; Kowi Luwak. Vous trouverez des caf&eacute;s des 4 coins du monde pour un choix de saveurs toujours plus diversifi&eacute;.</span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">D&egrave;s le d&eacute;but, nous avons fait le choix de privil&eacute;gier la qualit&eacute; et la vari&eacute;t&eacute; de nos produits. Pour cela Kahoueh s&rsquo;engage &agrave; utiliser des fournisseurs Locaux sur la totalit&eacute; des produits propos&eacute;.</span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">De plus nous avons d&eacute;velopp&eacute; plusieurs partenariats avec des fournisseurs Sud-Americain, Africain et Asiatique de confiance qui nous accompagne depuis nos d&eacute;buts.</span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">Nos caf&eacute;s sont ensuite torr&eacute;fi&eacute; dans nos installations proches de Paris. </span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">Kahoueh s&rsquo;engage dans une d&eacute;marche &eacute;co-responsable et garantie des caf&eacute;s issus du commerce &eacute;quitable.</span></p></p>
 </div>
+<br>
+<br>
+<p style="text-align: center;"><span style="font-family: georgia, palatino, serif;"><span style="font-family: georgia, palatino, serif; color: #800000;">Avec l'arriv&eacute; de l'hiver et des faibles temp&eacute;ratures, nous vous proposons ce mois-ci une s&eacute;lection de caf&eacute; intenses et doux.</span><br /><spa style="font-family: georgia, palatino, serif; color: #800000;">Parfait pour en profiter au coins du feu !&nbsp;</span>&nbsp;</span></p>
+<br><br>
+<p style="text-align: center;"><span style="font-family: 'arial black', sans-serif; font-size: 14pt;"><strong><span style="font-family: georgia, palatino, serif;">Nos S&eacute;lections du moment</span></strong></span></p>
+<br>
+<br>
+<br>
 	<div class="parentpromo">
 	
 	<div class="promo1"> 
-	<img class="photox1" src="https://graindesail.com/900-home_default/cafe-de-colombie-pitalito.jpg">
-	<p> Arabica : Café Origine Colombie </p>
+	<div class="card">
+  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
+  	<div class="cardcontain">
+    <p><b>Café aka</b></p>
+    <p>viens de loin</p>
+    <p style="text-align: right;">A partir de </p>
+    <h3 class="price">10.99 €</h3>
+  </div>
+  <a href="cafes.jsp" class='card-link'></a>
+</div>
 	</div>
 	
 	<div class="promo2">
-	<img class="photox1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg">
-	<p> Arabica: Café de Paris </p>
-	</div>
+	<div class="card">
+  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
+  	<div class="cardcontain">
+    <p><b>Café aka</b></p>
+    <p>viens de loin</p>
+    <p style="text-align: right;">A partir de </p>    
+    <h3 class="price">10.99 €</h3>
+  </div>
+  <a href="cafes.jsp" class='card-link'></a>
 </div>
-
+	</div>
+	
+		<div class="promo3">
+	<div class="card">
+  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
+  	<div class="cardcontain">
+    <p><b>Café aka</b></p>
+    <p>viens de loin</p>
+    <p style="text-align: right;">A partir de </p>
+    <h3 class="price">10.99 €</h3>
+  </div>
+  <a href="cafes.jsp" class='card-link'></a>
+</div>
+	</div>
+	
+	
+	<div class="promo4">
+	<div class="card">
+  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
+  	<div class="cardcontain">
+    <p><b>Café aka</b></p>
+    <p>viens de loin</p>
+    <p style="text-align: right;">A partir de </p>
+    <h3 class="price">10.99 €</h3>
+  </div>
+  <a href="cafes.jsp" class='card-link'></a>
+</div>
+	</div>
+	
+	
+</div>
+<br>
+<br>
+<br>
 
 <div class="footer-dark">
         <footer>
