@@ -48,8 +48,8 @@
             </div>
 
             <div class="input-box">
-                <span class="details">Contenu</span>
-                <input type="text" name="contenu" placeholder="Entrez votre message">
+                <span class="details">Votre message</span>
+                <textarea name="contenu" placeholder="Entrez votre message" required></textarea>
             </div>
 
         </div>
@@ -62,7 +62,7 @@
     </form>	
     </div>
     
-<br> <br> <br> <br> <br>
+<br> <br>
 <div class="footer-dark">
         <footer>
             <div class="container">

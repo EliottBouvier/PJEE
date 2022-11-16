@@ -408,7 +408,15 @@ grid-template-rows: repeat(2, 1fr);
 grid-column-gap: 10px;
 grid-row-gap: 20px;
 margin-top: 7%;
+}
 
+.parentB {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 1px;
+grid-row-gap: 50px;
+margin-top: 7%;
 }
 
 .parent img{
@@ -416,8 +424,9 @@ width: 500px;
 height: 300px; 
 }
 
-.parent p{
-text-align: center; 
+.parentB img{
+width: 500px;
+height: 300px; 
 }
 
 .div1 { 
@@ -435,8 +444,18 @@ grid-area: 1 / 3 / 2 / 4;
 justify-self: center;
 }
 
+.div3b { 
+grid-area: 2 / 1 / 3 / 2;
+justify-self: center; 
+}
+
 .div4 { 
 grid-area: 2 / 1 / 3 / 2;
+justify-self: center;
+}
+
+.div4b { 
+grid-area: 2 / 2 / 3 / 3;
 justify-self: center;
 }
 
@@ -450,11 +469,42 @@ grid-area: 2 / 3 / 3 / 4;
 justify-self: center;
 }
 
+.textP{
+	padding-top:10px;
+	padding-bottom:5px;
+	font-weight:600;
+	font-size:18px;	
+}
+
+.textMC{
+	padding-top:15px;
+	padding-bottom:25px;
+}
+
+.marque{
+	padding-top:9px;
+	padding-bottom:9px;
+	padding-right:19px;
+	padding-left:19px;
+	background:#88421D;
+	color:wheat;
+	border-radius: 15px;
+}
+
+.catégorie{
+	padding-top:9px;
+	padding-bottom:9px;
+	padding-right:19px;
+	padding-left:19px;
+	background:#88421D;
+	color:wheat;
+	border-radius: 15px;
+}
+
 .btnQuantite{
-  margin-top: 25px;
-  margin-left: 12%;
+  margin-left: 29.5%;
   height: 40px;
-  width: 140px;
+  width: 188px;
   display: flex;
   float:left;
   align-items: center;
@@ -462,19 +512,6 @@ justify-self: center;
   background: #FFF;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-
-.boitePrix{
-	margin-top: 10px;
-	float:right;
-	margin-right:10%;
-}
-
-span.prix{
-	width: 100%;
-	text-align: center;
-	font-size: 52px;
-	color: #88421D;
 }
 
 .btnQuantite span{
@@ -506,14 +543,15 @@ background: #88421D;
 color: wheat;
 border-radius: 18px;
 }
+
 /*--------------------------- PAGE DE CONTACT -----------------------------------*/
 
 .container1{
-  margin-top: 5%;
+  margin-top: 7%;
   margin-left: 31%;
   max-width: 700px;
   width: 100%;
-  height: 500px;
+  height: 650px;
   background: #88421D;
   padding: 25px 25px 25px 25px;
   border-radius: 10px;
@@ -566,6 +604,16 @@ form .user-details .input-box{
   transition: all 0.3s ease;
 }
 
+.user-details .input-box textarea {
+height: 195px;
+width: 300px;
+border-radius:10px;
+padding: 15px 0px 0px 10px;
+}
+
+.user-details .input-box textarea::placeholder {
+	font-size: 16px;
+}
 .user-details .input-box input:valid{
   border-color: green;
 }

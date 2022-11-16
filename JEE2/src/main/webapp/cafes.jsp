@@ -28,50 +28,160 @@
 	
 <div class="parent">
 
-	<div class="div1"> 
+	<div class="div1">
+	<div class="card">
 	<img class="photox1" src="https://graindesail.com/900-home_default/cafe-de-colombie-pitalito.jpg">
-	<p> Arabica : Café Origine Colombie </p>
+	<div class="cardcontain">
+	<p class="textP">  Arabica : Café Origine Colombie </p>
+		<p class="textMC"> <span class="marque">Désir du soir</span> <span class="catégorie">Bio</span> </p>
 		
 		<div class="divQP">
+		
 			<div class="btnQuantite">
 			<span class="minus">-</span>
 			<span class="num">01</span>
 			<span class="plus">+</span>
 			</div>
 			
-			<div class="boitePrix">
-			<span class="prix"> 12€ </span>
-			</div>
+			<p style="text-align: right;">A partir de </p>    
+    		<h3 class="price">10.99 €</h3>
+			
 		</div>
+	</div>
+	</div>
 		<div class="ajouterPanier">
-		<input type="submit" value="Ajouter au panier">
-		</div>
-	
+			<input type="submit" value="Ajouter au panier">
+		</div> 	
 	</div>
 	
 	<div class="div2">
+	<div class="card">
 	<img class="photox1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg">
-	<p> Arabica: Café de Paris </p>
+	<div class="cardcontain">
+	<p class="textP">  Arabica: Café de Paris </p>
+	<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">En grain</span> </p>
+		
+		<div class="divQP">
+		
+			<div class="btnQuantite">
+			<span class="minus">-</span>
+			<span class="num">01</span>
+			<span class="plus">+</span>
+			</div>
+			
+			<p style="text-align: right;">A partir de </p>    
+    		<h3 class="price">10.99 €</h3>
+			
+		</div>
+	</div>
+	</div>
+		<div class="ajouterPanier">
+			<input type="submit" value="Ajouter au panier">
+		</div> 
 	</div>
 	
 	<div class="div3">
+	<div class="card">
 	<img class="photox1" src="https://factum-info.net/images/1_Fakty/5_Raznoe/34_2_kopi-luwak-1.jpg">
-	<p> Kowi Luwak: Café sensation Sahara </p> 
+	<div class="cardcontain">
+	<p class="textP">  Kowi Luwak: Café sensation Sahara </p>
+	<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">Bio</span> </p>
+		
+		<div class="divQP">
+		
+			<div class="btnQuantite">
+			<span class="minus">-</span>
+			<span class="num">01</span>
+			<span class="plus">+</span>
+			</div>
+			
+			<p style="text-align: right;">A partir de </p>    
+    		<h3 class="price">10.99 €</h3>
+			
+		</div>
+	</div>
+	</div>
+		<div class="ajouterPanier">
+			<input type="submit" value="Ajouter au panier">
+		</div>
 	</div>
 	
-	<div class="div4"> 
+	<div class="div4">
+	<div class="card">
 	<img class="photox1" src="https://www.monsieurcafe.org/wp-content/uploads/2017/08/monsieur_cafe_guide_cafe_moulu.jpg">
-	<p> Robusta : Café </p>
+	<div class="cardcontain">
+	<p class="textP">  Robusta : Café </p>
+	<p class="textMC"> <span class="marque">Désir du soir</span> <span class="catégorie">Moulus</span> </p>
+		
+		<div class="divQP">
+		
+			<div class="btnQuantite">
+			<span class="minus">-</span>
+			<span class="num">01</span>
+			<span class="plus">+</span>
+			</div>
+			
+			<p style="text-align: right;">A partir de </p>    
+    		<h3 class="price">10.99 €</h3>
+			
+		</div>
+	</div>
+	</div>
+		<div class="ajouterPanier">
+			<input type="submit" value="Ajouter au panier">
+		</div>
 	</div>
 	
-	<div class="div5"> 
+	<div class="div5">
+	<div class="card"> 
 	<img class="photox1" src="https://media1.coffee-webstore.com/img/cms/Blog/2020/11%20-%20NOVEMBRE/caf%C3%A9-en-grains-espresso.jpg">
-	<p> Arabica : café matin légé </p>
+	<div class="cardcontain">
+	<p class="textP">  Arabica : café matin légé </p>
+	<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">Moulus</span> </p>
+		
+		<div class="divQP">
+		
+			<div class="btnQuantite">
+			<span class="minus">-</span>
+			<span class="num">01</span>
+			<span class="plus">+</span>
+			</div>
+			
+			<p style="text-align: right;">A partir de </p>    
+    		<h3 class="price">10.99 €</h3>
+			
+		</div>
+	</div>
+	</div>
+		<div class="ajouterPanier">
+			<input type="submit" value="Ajouter au panier">
+		</div>
 	</div>
 	
 	<div class="div6">
+	<div class="card">
 	<img class="photox1" src="https://occitanie-cafe.fr/img/cms/cafe-bio-machine-tasse-grain-capsule-occitanie.jpg"> 
-	<p> Robusta: Café noir corsé </p>
+	<div class="cardcontain">
+	<p class="textP">  Robusta: Café noir corsé </p>
+	<p class="textMC"> <span class="marque">Désir du soir</span> <span class="catégorie">En grain</span> </p>
+		
+		<div class="divQP">
+		
+			<div class="btnQuantite">
+			<span class="minus">-</span>
+			<span class="num">01</span>
+			<span class="plus">+</span>
+			</div>
+			
+			<p style="text-align: right;">A partir de </p>    
+    		<h3 class="price">10.99 €</h3>
+			
+		</div>
+	</div>
+	</div>
+		<div class="ajouterPanier">
+			<input type="submit" value="Ajouter au panier">
+		</div>
 	</div>
 	
 </div>
