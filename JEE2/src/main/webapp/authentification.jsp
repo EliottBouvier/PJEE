@@ -2,6 +2,10 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<% if(session.getAttribute("utilPrenom") != null) {
+	response.sendRedirect("accueil.jsp");
+}
+%>
 <head>
 <meta charset="ISO-8859-1">
 <title>Authentification</title>
@@ -28,7 +32,7 @@
 	
 <div class="wrapper">
 	<div class="title"> <span>Authentification</span></div>
-	<form method="get" action="LoginServlet">
+	<form method="POST" action="LoginServlet">
 	<div class="row">
 			<i class="fas fa-user"></i>
 			<input type="text" name="id" id="id" placeholder="Email ou téléphone" maxlength="200" required>

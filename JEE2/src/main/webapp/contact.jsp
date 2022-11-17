@@ -27,8 +27,9 @@
 	</nav>
 	
 <div class="container1">
+	${result}
     <div class="title"><span>Nous Contacter </span></div>
-    <form name="Enregistrement" method="post" action="php/mail.php">
+    <form name="Enregistrement" method="post" action="ContactServlet">
     
         <div class="user-details">
 

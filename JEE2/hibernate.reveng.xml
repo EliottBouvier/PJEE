@@ -13,6 +13,7 @@
 	<table-filter match-catalog="kahoueh" match-name="Marque" />
 	<table-filter match-catalog="kahoueh" match-name="Role" />
 	<table-filter match-catalog="kahoueh" match-name="Utilisateur" />
+	<table-filter match-name="Contact" match-catalog="kahoueh"></table-filter>
 	<table catalog="kahoueh" name="Article">
 		<column name="artID"></column>
 		<column name="artImg"></column>
@@ -68,5 +69,12 @@
 		<column name="utilMail"></column>
 		<column name="utilTel"></column>
 		<column name="utilCP"></column>
+	</table>
+	<table catalog="kahoueh" name="Contact">
+		<column name="id"></column>
+		<column name="contenu"></column>
+		<column name="prenom"></column>
+		<column name="email"></column>
+		<column name="nom"></column>
 	</table>
 </hibernate-reverse-engineering>

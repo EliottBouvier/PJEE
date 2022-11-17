@@ -17,5 +17,6 @@
 	    <mapping class="models.Marque" />
 	    <mapping class="models.Role" />
 	    <mapping class="models.Utilisateur" />
+	    <mapping class="models.Contact" />
     </session-factory>
 </hibernate-configuration>

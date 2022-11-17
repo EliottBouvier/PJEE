@@ -27,31 +27,34 @@
 	</nav>
 	
 <div class="parent">
-
+	${result }
 	<div class="div1">
-	<div class="card">
-	<img class="photox1" src="https://graindesail.com/900-home_default/cafe-de-colombie-pitalito.jpg">
-	<div class="cardcontain">
-	<p class="textP">  Arabica : Café Origine Colombie </p>
-		<p class="textMC"> <span class="marque">Désir du soir</span> <span class="catégorie">Bio</span> </p>
-		
-		<div class="divQP">
-		
-			<div class="btnQuantite">
-			<span class="minus">-</span>
-			<span class="num">01</span>
-			<span class="plus">+</span>
+	<form action="ajoutPanierServlet" method="post">
+		<div class="card">
+		<img class="photox1" src="https://graindesail.com/900-home_default/cafe-de-colombie-pitalito.jpg">
+		<div class="cardcontain">
+		<input type="text" name="id" id="id" value="1" hidden>
+		<p class="textP">  Arabica : Café Origine Colombie </p>
+			<p class="textMC"> <span class="marque">Désir du soir</span> <span class="catégorie">Bio</span> </p>
+			
+			<div class="divQP">
+			
+				<div class="btnQuantite">
+					<span class="minus">-</span>
+					<input type="text" name="quantity" id="quantity" value="1" hidden><span class="num">01</span>
+					<span class="plus">+</span>
+				</div>
+				
+				<p style="text-align: right;">A partir de </p>    
+	    		<h3 class="price">10.99 €</h3>
+				
 			</div>
-			
-			<p style="text-align: right;">A partir de </p>    
-    		<h3 class="price">10.99 €</h3>
-			
 		</div>
-	</div>
-	</div>
-		<div class="ajouterPanier">
-			<input type="submit" value="Ajouter au panier">
-		</div> 	
+		</div>
+			<div class="ajouterPanier">
+				<input type="submit" value="Ajouter au panier">
+			</div> 	
+	</form>
 	</div>
 	
 	<div class="div2">
