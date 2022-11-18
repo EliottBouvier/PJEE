@@ -21,11 +21,56 @@
 			<li><a href="http://localhost:8080/JEE2/contact.jsp"> Contact </a></li>
 			<li><a href="http://localhost:8080/JEE2/panier.jsp"> Panier </a></li>
 			<li><a href="http://localhost:8080/JEE2/authentification.jsp"> <i class="fas fa-user"></i> </a></li>
-
 		</ul>
 		</div>
 	</nav>
+
+<table id="panier">
+	<caption>Votre Panier</caption>
+	<thead>
+	<tr>
+		<th>Article</th>
+		<th>Prix unité</th>
+		<th>Quantité</th>
+		<th>Total</th>
+		<th> Actions </th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td> <button> Retirer du panier </button> </td>
+	</tr>
+	<tr>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td> <button> Retirer du panier </button> </td>
+	</tr>
+	<tr>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td> <button> Retirer du panier </button> </td>
+	</tr>
+	<tr>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td> <button> Retirer du panier </button> </td>
+	</tr>
 	
+	
+	</tbody>
+</table>
+
+<a href="http://localhost:8080/JEE2/paiement.jsp"> <button class="btnpayer"> PASSER COMMANDE </button> </a>
 
 <div class="footer-dark">
         <footer>
