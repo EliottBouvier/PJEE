@@ -28,24 +28,33 @@
 	
 <div class="container1">
 	${result}
+<<<<<<< Updated upstream
     <div class="title3"><span> Vérifications de paiement </span></div>
     <form name="Enregistrement" method="post" action="ContactServlet">
+=======
+    <div class="title"><span> Vérifications de paiement </span></div>
+    <form name="Enregistrement" method="post" action="PaiementProcessServlet">
+>>>>>>> Stashed changes
     
         <div class="user-details">
 
             <div class="input-box">
                 <span class="details">Carte Bancaire</span>
-                <input type="text" name="cb" placeholder="Entrez votre Carte bancaire" maxlength="30">
+                ${numCarte }
             </div>
 
             <div class="input-box">
                 <span class="details">Numéro CVC</span>
-                <input type="text" name="prenom" placeholder="Entrez votre code confidentiel cvc" maxlength="3">
+                <input type="text" name="cvc" placeholder="Entrez votre code confidentiel cvc" maxlength="3">
             </div>
 
             <div class="input-box">
                 <span class="details">Date d'expiration</span>
+<<<<<<< Updated upstream
                 <input type="date" name="dateExp">
+=======
+                <input type="text" name="dateExp">
+>>>>>>> Stashed changes
             </div>
 
         </div>

@@ -46,6 +46,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("utilCP", utilisateur.getUtilCp());
 			session.setAttribute("utilVille", utilisateur.getUtilVille());
 			session.setAttribute("utilCB", utilisateur.getUtilCb());
+			session.setAttribute("utilRole", utilisateur.getRole());
 			response.sendRedirect("accueil.jsp");
 		} else{
 			request.setAttribute("result", "<center><p style=\"color:wheat\";>L'identifiant ou le mot de passe est invalide !</p></center>");

@@ -37,26 +37,34 @@ public class VoirPanierServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		final HttpSession httpSession = request.getSession();
 		final RequestDispatcher requestDispatcher = request.getRequestDispatcher("/panier.jsp");
-		if(httpSession.getAttribute("panier") ==  null) {
-			request.setAttribute("result", "Le panier est vide !");
+		if(httpSession.getAttribute("panier") ==  null || httpSession.getAttribute("panier") == "") {
+			request.setAttribute("result", "<center>Le panier est vide !</center>");
 			requestDispatcher.forward(request, response);
 		} else {
 			final String panier = (String) httpSession.getAttribute("panier");
 			final String[] panierArticles = panier.split(";");
-			String result = "";
+			String result = "<table id=\"panier\"><caption>Votre Panier</caption>";
+			result += "	<thead><tr><th>Article</th><th>Prix unité</th><th>Quantité</th><th>Total</th><th> Actions </th></tr></thead><tbody>";
 			for(String articleStr : panierArticles) {
-				final Article article = this.getArticle(articleStr.split("/")[0]);
+				final Integer idInt = Integer.parseInt(articleStr.split("/")[0]) + 1;
+				final Article article = this.getArticle(idInt.toString());
 				if(article == null) {
-					result = "Il y a un problème dans la récupération des articles...";
+					result = "<center>Il y a un problème dans la récupération des articles...</center>";
 					request.setAttribute("result", result);
 					requestDispatcher.forward(request, response);
 					return;
 				}
 				
 				final Integer quantity = Integer.parseInt(articleStr.split("/")[1]);
-				result += article.getArtDesc() + " - " + article.getArtPrix() + "€ , Prix total: " + (article.getArtPrix() * quantity) + "€<br>";
+				result += "<tr><td>" + article.getArtDesc() + "</td>";
+				result += "<td>" + article.getArtPrix() + "€</td>";
+				result += "<td>" + quantity + "</td>";
+				result += "<td>" + (quantity * article.getArtPrix()) + "€</td>";
+				result += "<td><form action=\"SupprimerArticlePanierServlet\" method=\"post\" id=\"form-" + article.getArtId() + "\"><input type=\"text\" name=\"id\" value=\"" + article.getArtId() + "\" hidden><div class=\"row button\"><input type=\"submit\" value=\"Retirer du panier\"></div></form></td>";
 			}
-			request.setAttribute("result", result);
+			result += "</tr></tbody></table>";
+			result += "<a href=\"PaiementServlet\"> <button class=\"btnpayer\"> PASSER COMMANDE </button> </a>";
+			request.setAttribute("affichage", result);
 			requestDispatcher.forward(request, response);
 		}
 	}

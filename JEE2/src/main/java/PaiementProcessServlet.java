@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,28 +36,31 @@ public class PaiementProcessServlet extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
+    
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	this.doPost(req, resp);
+    }
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*
-		 * TODO:
-		 * Récupérer le panier via HTTPSession V
-		 * Récupérer les data de l'utilisateur via HTTPSession V
-		 * Check si le solde de la carte peut supporter la transaction V
-		 * Si oui => créer une commande V, émettre une facture V, et débiter carte V et envoyer un mail (si possible)
-		 * Si non => Envoyer un message d'erreur  V
-		 * GERER STOCK V
-		 */
 		final HttpSession httpSession = request.getSession();
 		final String panier = (String) httpSession.getAttribute("panier");
-		final String utilID = (String) httpSession.getAttribute("utilID");
+		final String utilID = ((Integer) httpSession.getAttribute("utilID")).toString();
+		final String cvc = (String) request.getAttribute("cvc");
+		final String expir = (String) request.getAttribute("dateExp");
+		if(utilID == null || utilID.equalsIgnoreCase("")) {
+			response.sendRedirect("authentification.jsp");
+			return;
+		}
+
 		final Banque banque = this.getBanque(((String)httpSession.getAttribute("utilCB")));
-		if(banque == null) {
-			/*
-			 * Return erreur pour la récupération de la banque
-			 */
+		if(banque == null || (banque.getCvc().equalsIgnoreCase(cvc) && banque.getExpir().equalsIgnoreCase(expir))) {
+			final RequestDispatcher requestDispatcher = request.getRequestDispatcher("PaiementServlet");
+			request.setAttribute("result", "<center><p style=\"color:wheat\";>Il y a une erreur dans la carte bleue !</p></center>");
+			requestDispatcher.forward(request, response);
 			return;
 		}
 		
@@ -66,7 +70,8 @@ public class PaiementProcessServlet extends HttpServlet {
 		float totalHT = 0;
 		int nombreArticle = 0;
 		for(String articleStr : panierArticles) {
-			final Article article = this.getArticle(articleStr.split("/")[0]);
+			final Integer idInt = Integer.parseInt(articleStr.split("/")[0]) + 1;
+			final Article article = this.getArticle(idInt.toString());
 			final float tauxTVAPourcent = article.getArtTauxTva();
 			final float tauxTVA = tauxTVAPourcent / 100;
 			final Integer quantity = Integer.parseInt(articleStr.split("/")[1]);
@@ -81,9 +86,9 @@ public class PaiementProcessServlet extends HttpServlet {
 			this.saveArticle(article);
 		}
 		if(banque.getSolde() < prixTotal) {
-			/*
-			 * Return erreur solde trop faible
-			 */
+			final RequestDispatcher requestDispatcher = request.getRequestDispatcher("paiement.jsp");
+			request.setAttribute("result", "<center><p style=\"color:wheat\";>Le solde est trop faible !</p></center>");
+			requestDispatcher.forward(request, response);
 			return;
 		}
 		
@@ -106,6 +111,8 @@ public class PaiementProcessServlet extends HttpServlet {
 		facture.setFactTva(totalTVA);
 		facture.setFactHt(totalHT);
 		this.saveFacture(facture);
+		httpSession.removeAttribute("panier");
+		response.sendRedirect("accueil.jsp");
 	}
 	
 	private void saveArticle(Article article) {
@@ -119,7 +126,7 @@ public class PaiementProcessServlet extends HttpServlet {
 	private void saveFacture(Facture facture) {
 		final Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
-		session.update(facture);
+		session.save(facture);
 		session.getTransaction().commit();
 		session.close();
 	}
@@ -145,12 +152,12 @@ public class PaiementProcessServlet extends HttpServlet {
 		session.beginTransaction();
 		List<EtatCommande> result = new ArrayList<>();
 		result = session.createQuery("from EtatCommande where etatcmdID='1'").list();
-		if(result.isEmpty()) return null;
 		session.getTransaction().commit();
+		if(result.isEmpty()) return null;
 		session.close();
 		return result.stream().findFirst().orElse(null);
 	}
-	
+
 	private Banque getBanque(String numCarte) {
 		final Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();

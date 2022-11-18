@@ -29,7 +29,7 @@ public class AjoutPanierServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
-		String quantityStr = request.getParameter("quantity");
+		String quantityStr = request.getParameter("quantity-" + id);
 		String from = request.getParameter("from");
 		RequestDispatcher dispatcher;
 		if(from.equalsIgnoreCase("cafe")) {
