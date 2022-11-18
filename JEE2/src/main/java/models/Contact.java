@@ -1,8 +1,10 @@
 package models;
-// Generated 15 nov. 2022 à 17:36:34 by Hibernate Tools 4.3.6.Final
+// Generated 18 nov. 2022 à 11:50:07 by Hibernate Tools 4.3.6.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -13,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "Contact", catalog = "kahoueh")
 public class Contact implements java.io.Serializable {
 
-	private int id;
+	private Integer id;
 	private String nom;
 	private String prenom;
 	private String email;
@@ -22,8 +24,7 @@ public class Contact implements java.io.Serializable {
 	public Contact() {
 	}
 
-	public Contact(int id, String nom, String prenom, String email, String contenu) {
-		this.id = id;
+	public Contact(String nom, String prenom, String email, String contenu) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
@@ -31,13 +32,14 @@ public class Contact implements java.io.Serializable {
 	}
 
 	@Id
+	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id", unique = true, nullable = false)
-	public int getId() {
+	public Integer getId() {
 		return this.id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

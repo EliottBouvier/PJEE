@@ -1,12 +1,16 @@
 package models;
-// Generated 15 nov. 2022 à 17:36:34 by Hibernate Tools 4.3.6.Final
+// Generated 18 nov. 2022 à 11:50:07 by Hibernate Tools 4.3.6.Final
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -26,6 +30,7 @@ public class Commande implements java.io.Serializable {
 	private String cmdArticles;
 	private int cmdEtat;
 	private int cmdUtil;
+	private Set<Facture> factures = new HashSet<Facture>(0);
 
 	public Commande() {
 	}
@@ -39,6 +44,18 @@ public class Commande implements java.io.Serializable {
 		this.cmdArticles = cmdArticles;
 		this.cmdEtat = cmdEtat;
 		this.cmdUtil = cmdUtil;
+	}
+
+	public Commande(Date cmdDate, float cmdPrix, int cmdNbArt, String cmdDesc, String cmdArticles, int cmdEtat,
+			int cmdUtil, Set<Facture> factures) {
+		this.cmdDate = cmdDate;
+		this.cmdPrix = cmdPrix;
+		this.cmdNbArt = cmdNbArt;
+		this.cmdDesc = cmdDesc;
+		this.cmdArticles = cmdArticles;
+		this.cmdEtat = cmdEtat;
+		this.cmdUtil = cmdUtil;
+		this.factures = factures;
 	}
 
 	@Id
@@ -115,6 +132,15 @@ public class Commande implements java.io.Serializable {
 
 	public void setCmdUtil(int cmdUtil) {
 		this.cmdUtil = cmdUtil;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "commande")
+	public Set<Facture> getFactures() {
+		return this.factures;
+	}
+
+	public void setFactures(Set<Facture> factures) {
+		this.factures = factures;
 	}
 
 }

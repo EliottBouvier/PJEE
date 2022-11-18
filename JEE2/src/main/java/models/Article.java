@@ -1,14 +1,11 @@
 package models;
-// Generated 15 nov. 2022 à 17:36:34 by Hibernate Tools 4.3.6.Final
+// Generated 18 nov. 2022 à 11:50:07 by Hibernate Tools 4.3.6.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -106,9 +103,8 @@ public class Article implements java.io.Serializable {
 	public void setArtTauxTva(float artTauxTva) {
 		this.artTauxTva = artTauxTva;
 	}
-	
-	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Categorie.class)
-	@JoinColumn(name = "artMarque", nullable = false, unique = true)
+
+	@Column(name = "artMarque", nullable = false)
 	public int getArtMarque() {
 		return this.artMarque;
 	}
@@ -117,8 +113,7 @@ public class Article implements java.io.Serializable {
 		this.artMarque = artMarque;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Categorie.class)
-	@JoinColumn(name = "artCategorie", nullable = false, unique = true)
+	@Column(name = "artCategorie")
 	public Integer getArtCategorie() {
 		return this.artCategorie;
 	}

@@ -9,11 +9,12 @@
 	<table-filter match-catalog="kahoueh" match-name="Categorie" />
 	<table-filter match-catalog="kahoueh" match-name="Commande" />
 	<table-filter match-catalog="kahoueh" match-name="EtatCommande" />
-	<table-filter match-catalog="kahoueh" match-name="Facture" />
 	<table-filter match-catalog="kahoueh" match-name="Marque" />
 	<table-filter match-catalog="kahoueh" match-name="Role" />
 	<table-filter match-catalog="kahoueh" match-name="Utilisateur" />
 	<table-filter match-name="Contact" match-catalog="kahoueh"></table-filter>
+	<table-filter match-name="Banque" match-catalog="kahoueh"></table-filter>
+	<table-filter match-name="Facture" match-catalog="kahoueh"></table-filter>
 	<table catalog="kahoueh" name="Article">
 		<column name="artID"></column>
 		<column name="artImg"></column>
@@ -42,13 +43,6 @@
 		<column name="etatcmdID"></column>
 		<column name="etatcmdDesc"></column>
 	</table>
-	<table catalog="kahoueh" name="Facture">
-		<column name="factID"></column>
-		<column name="factTVA"></column>
-		<column name="factHT"></column>
-		<column name="factDate"></column>
-		<column name="factTTC"></column>
-	</table>
 	<table catalog="kahoueh" name="Marque">
 		<column name="marqueID"></column>
 		<column name="marqueNom"></column>
@@ -76,5 +70,18 @@
 		<column name="prenom"></column>
 		<column name="email"></column>
 		<column name="nom"></column>
+	</table>
+	<table catalog="kahoueh" name="Banque">
+		<column name="id"></column>
+		<column name="numCarte"></column>
+		<column name="solde"></column>
+	</table>
+	<table catalog="kahoueh" name="Facture">
+		<column name="factID"></column>
+		<column name="factDate"></column>
+		<column name="factTVA"></column>
+		<column name="factTTC"></column>
+		<column name="factCmdID"></column>
+		<column name="factHT"></column>
 	</table>
 </hibernate-reverse-engineering>

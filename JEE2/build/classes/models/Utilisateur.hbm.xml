@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 15 nov. 2022 ? 17:36:34 by Hibernate Tools 4.3.6.Final -->
+<!-- Generated 18 nov. 2022 ? 11:50:08 by Hibernate Tools 4.3.6.Final -->
 <hibernate-mapping>
     <class name="models.Utilisateur" table="Utilisateur" catalog="kahoueh" optimistic-lock="version">
         <id name="utilId" type="java.lang.Integer">

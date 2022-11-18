@@ -18,5 +18,6 @@
 	    <mapping class="models.Role" />
 	    <mapping class="models.Utilisateur" />
 	    <mapping class="models.Contact" />
+	    <mapping class="models.Banque" />
     </session-factory>
 </hibernate-configuration>

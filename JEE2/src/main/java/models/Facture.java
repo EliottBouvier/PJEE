@@ -1,12 +1,15 @@
 package models;
-// Generated 15 nov. 2022 à 17:36:34 by Hibernate Tools 4.3.6.Final
+// Generated 18 nov. 2022 à 11:50:07 by Hibernate Tools 4.3.6.Final
 
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,6 +22,7 @@ import javax.persistence.TemporalType;
 public class Facture implements java.io.Serializable {
 
 	private Integer factId;
+	private Commande commande;
 	private Date factDate;
 	private float factHt;
 	private float factTva;
@@ -27,7 +31,8 @@ public class Facture implements java.io.Serializable {
 	public Facture() {
 	}
 
-	public Facture(Date factDate, float factHt, float factTva, float factTtc) {
+	public Facture(Commande commande, Date factDate, float factHt, float factTva, float factTtc) {
+		this.commande = commande;
 		this.factDate = factDate;
 		this.factHt = factHt;
 		this.factTva = factTva;
@@ -44,6 +49,16 @@ public class Facture implements java.io.Serializable {
 
 	public void setFactId(Integer factId) {
 		this.factId = factId;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "factCmdID", nullable = false)
+	public Commande getCommande() {
+		return this.commande;
+	}
+
+	public void setCommande(Commande commande) {
+		this.commande = commande;
 	}
 
 	@Temporal(TemporalType.DATE)

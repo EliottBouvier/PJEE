@@ -35,6 +35,7 @@ public class LoginServlet extends HttpServlet {
 		Utilisateur utilisateur = this.getUtilisateur(id, mdp);
 		if (utilisateur != null){
 			HttpSession session = request.getSession();
+			session.setAttribute("utilID", utilisateur.getUtilId());
 			session.setAttribute("utilMail", utilisateur.getUtilMail());
 			session.setAttribute("utilNom", utilisateur.getUtilNom());
 			session.setAttribute("utilPrenom", utilisateur.getUtilPrenom());
