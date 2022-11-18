@@ -24,75 +24,42 @@
 		</ul>
 		</div>
 	</nav>
-
-<table id="panier">
-	<caption>Votre Panier</caption>
-	<thead>
-	<tr>
-		<th>Article</th>
-		<th>Prix unité</th>
-		<th>Quantité</th>
-		<th>Total</th>
-		<th> Actions </th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td>apu</td>
-		<td>apu</td>
-		<td>apu</td>
-		<td>apu</td>
-		<td> <form id="form-1">
-		<div class="row button">
-		<input type="submit" value="Retirer du panier">
-		</div>
-		</form>
-		 </td>
-	</tr>
-	<tr>
-		<td>apu</td>
-		<td>apu</td>
-		<td>apu</td>
-		<td>apu</td>
-		<td> <form id="form-1">
-		<div class="row button">
-		<input type="submit" value="Retirer du panier">
-		</div>
-		</form>
-		 </td>
-	</tr>
-	<tr>
-		<td>apu</td>
-		<td>apu</td>
-		<td>apu</td>
-		<td>apu</td>
-		<td> <form id="form-1">
-		<div class="row button">
-		<input type="submit" value="Retirer du panier">
-		</div>
-		</form>
-		 </td>
-	</tr>
-	<tr>
-		<td>apu</td>
-		<td>apu</td>
-		<td>apu</td>
-		<td>apu</td>
-		<td> 
-		<form id="form-1">
-		<div class="row button">
-		<input type="submit" value="Retirer du panier">
-		</div>
-		</form>
-		</td>
-	</tr>
 	
-	
-	</tbody>
-</table>
+<div class="container1">
+	${result}
+    <div class="title"><span> Vérifications de paiement </span></div>
+    <form name="Enregistrement" method="post" action="ContactServlet">
+    
+        <div class="user-details">
 
-<a href="http://localhost:8080/JEE2/paiement.jsp"> <button class="btnpayer"> PASSER COMMANDE </button> </a>
+            <div class="input-box">
+                <span class="details">Carte Bancaire</span>
+                <input type="text" name="cb" placeholder="Entrez votre Carte bancaire" maxlength="30">
+            </div>
 
+            <div class="input-box">
+                <span class="details">Numéro CVC</span>
+                <input type="text" name="prenom" placeholder="Entrez votre code confidentiel cvc" maxlength="3">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Date d'expiration</span>
+                <input type="email" name="dateExp">
+            </div>
+
+          
+
+        </div>
+
+        <div class="button">
+            <input type="submit" value="Envoyer">
+            <input id="reset" type="reset" value="Effacer" />
+        </div>
+       
+    </form>	
+    </div>
+    
+<br> <br>
 <div class="footer-dark">
         <footer>
             <div class="container">
