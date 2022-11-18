@@ -98,15 +98,21 @@
 <div class="cont">
 	<div class="txtacc">
 	<br>
+  	<br>
+  	<p><span>Cr&eacute;e en 2015 Kahoueh est un revendeur de caf&eacute; en vrac unique.</span></p>
+	<p><span>Nous proposons des caf&eacute; moulus ou en grain. Un large panel de caf&eacute;s s&rsquo;offre &agrave; vous : arabica, Robusta, et m&ecirc;me le fameux et pris&eacute; Kowi Luwak. Vous trouverez des caf&eacute;s des 4 coins du monde pour un choix de saveurs toujours plus diversifi&eacute;.</span><br />
+	<span>D&egrave;s le d&eacute;but, nous avons fait le choix de privil&eacute;gier la qualit&eacute; et la vari&eacute;t&eacute; de nos produits. Pour cela Kahoueh s&rsquo;engage &agrave; utiliser des fournisseurs Locaux sur la totalit&eacute; des produits propos&eacute;.</span><br />
+	<span>De plus nous avons d&eacute;velopp&eacute; plusieurs partenariats avec des fournisseurs Sud-Americain, Africain et Asiatique de confiance qui nous accompagne depuis nos d&eacute;buts.</span><br />
+	<span>Nos caf&eacute;s sont ensuite torr&eacute;fi&eacute; dans nos installations proches de Paris. </span><br />
+	<span>Kahoueh s&rsquo;engage dans une d&eacute;marche &eacute;co-responsable et garantie des caf&eacute;s issus du commerce &eacute;quitable.</span></p>
+	
 	<br>
-	<p style="text-align: center;"><span style="font-family: georgia, palatino, serif; color: #800000;">Cr&eacute;e en 2015 Kahoueh est un revendeur de caf&eacute; en vrac unique.</span></p>
-<p style="text-align: center;"><span style="font-family: georgia, palatino, serif; color: #800000;">Nous proposons des caf&eacute; moulus ou en grain. Un large panel de caf&eacute;s s&rsquo;offre &agrave; vous : arabica, Robusta, et m&ecirc;me le fameux et pris&eacute; Kowi Luwak. Vous trouverez des caf&eacute;s des 4 coins du monde pour un choix de saveurs toujours plus diversifi&eacute;.</span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">D&egrave;s le d&eacute;but, nous avons fait le choix de privil&eacute;gier la qualit&eacute; et la vari&eacute;t&eacute; de nos produits. Pour cela Kahoueh s&rsquo;engage &agrave; utiliser des fournisseurs Locaux sur la totalit&eacute; des produits propos&eacute;.</span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">De plus nous avons d&eacute;velopp&eacute; plusieurs partenariats avec des fournisseurs Sud-Americain, Africain et Asiatique de confiance qui nous accompagne depuis nos d&eacute;buts.</span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">Nos caf&eacute;s sont ensuite torr&eacute;fi&eacute; dans nos installations proches de Paris. </span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">Kahoueh s&rsquo;engage dans une d&eacute;marche &eacute;co-responsable et garantie des caf&eacute;s issus du commerce &eacute;quitable.</span></p></p>
+	<br>
+	<p><span>Avec l'arriv&eacute; de l'hiver et des faibles temp&eacute;ratures, nous vous proposons ce mois-ci une s&eacute;lection de caf&eacute; intenses et doux.</span><br />
+	<span>Parfait pour en profiter au coins du feu !&nbsp;</span>&nbsp;</p>
+	<br><br>
+	<p><span>Nos S&eacute;lections du moment</span></p>
 </div>
-<br>
-<br>
-<p style="text-align: center;"><span style="font-family: georgia, palatino, serif;"><span style="font-family: georgia, palatino, serif; color: #800000;">Avec l'arriv&eacute; de l'hiver et des faibles temp&eacute;ratures, nous vous proposons ce mois-ci une s&eacute;lection de caf&eacute; intenses et doux.</span><br /><spa style="font-family: georgia, palatino, serif; color: #800000;">Parfait pour en profiter au coins du feu !&nbsp;</span>&nbsp;</span></p>
-<br><br>
-<p style="text-align: center;"><span style="font-family: 'arial black', sans-serif; font-size: 14pt;"><strong><span style="font-family: georgia, palatino, serif;">Nos S&eacute;lections du moment</span></strong></span></p>
 <br>
 <br>
 <br>
@@ -118,8 +124,8 @@
   	<div class="cardcontain">
     <p class="textP">  Arabica: Café de Paris </p>
     <p>Fort, puissant</p>
-    <p style="text-align: right;">A partir de </p>
-    <h3 class="price">10.99 €</h3>
+    <p style="text-align: right;">Séléction du </p>
+    <h3 class="price">Moment</h3>
   </div>
   <a href="cafes.jsp" class='card-link'></a>
 </div>
@@ -131,8 +137,8 @@
   	<div class="cardcontain">
 	<p class="textP">  Arabica : café matin légé </p>
     <p>Savoureux, onctueux</p>
-    <p style="text-align: right;">A partir de </p>    
-    <h3 class="price">10.99 €</h3>
+    <p style="text-align: right;">Séléction du </p>    
+    <h3 class="price">Moment</h3>
   </div>
   <a href="cafes.jsp" class='card-link'></a>
 </div>
@@ -144,8 +150,8 @@
   	<div class="cardcontain">
 	<p class="textP">  Robusta: Café noir corsé </p>
     <p>Ideal pour le Matin ! </p>
-    <p style="text-align: right;">A partir de </p>
-    <h3 class="price">10.99 €</h3>
+    <p style="text-align: right;">Séléction du </p>
+    <h3 class="price">Moment</h3>
   </div>
   <a href="cafes.jsp" class='card-link'></a>
 </div>
@@ -154,18 +160,19 @@
 	
 	<div class="promo4">
 	<div class="card">
-  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
+  	<img class="img1" src="https://www.ikea.com/fr/fr/images/products/vaerdera-tasse-a-cafe-et-soucoupe-blanc__22811_pe095649_s5.jpg?f=s" style="width:100%">
   	<div class="cardcontain">
-	<p class="textP">  Tasse </p>
-    <p>Tasse etanche ! </p>
-    <p style="text-align: right;">A partir de </p>
-    <h3 class="price">10.99 €</h3>
+	<p class="textP">  Tasse Kaoueh </p>
+    <p>Parfaite pour vos degustations !  </p>
+    <p style="text-align: right;">Séléction du </p>
+    <h3 class="price">Moment</h3>
   </div>
   <a href="cafes.jsp" class='card-link'></a>
 </div>
 	</div>
 	
 	
+</div>
 </div>
 <br>
 <br>

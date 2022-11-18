@@ -399,6 +399,24 @@ justify-self: center;
   padding: 6% 0 0 0;
 
 }
+
+.txtacc p{
+	text-align: center;
+	font-weight: 600;
+	font-size: 22px;
+}
+
+.txtacc span{
+ font-family: georgia, palatino, serif;
+ color: #800000;
+  
+}
+
+.img1 {
+width: 500px;
+height: 300px; 
+}
+
 /*-----------------------------ADMIN-------------------------------*/
 /*Reset CSS*/
 .Mennu{
