@@ -45,7 +45,7 @@ public class EditArticleAdminProcessServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		final HttpSession httpSession = request.getSession();
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("accueil.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("Accueil");
 		if(httpSession.getAttribute("utilRole") != null) {
 			final Role role = (Role) httpSession.getAttribute("utilRole");
 			if(role.getIdRole() != 2) {
@@ -58,6 +58,17 @@ public class EditArticleAdminProcessServlet extends HttpServlet {
 			if(article == null) {
 				
 			} else {
+				final HttpSession htse = request.getSession();
+				final RequestDispatcher dis = request.getRequestDispatcher("AdminArticles");
+				if(htse.getAttribute("utilRole") != null) {
+					final Role role2 = (Role) htse.getAttribute("utilRole");
+					String affichage = "";
+					if(role2.getIdRole() == 2) {
+						affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+					}
+					affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+					request.setAttribute("affichageNav", affichage);
+				}
 				final Integer newStockInt = Integer.parseInt(((String) request.getParameter("stock")));
 				final Float newPriceFloat = Float.parseFloat(((String) request.getParameter("prix")));
 				article.setArtPrix(newPriceFloat);

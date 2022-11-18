@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import models.Role;
+
 /**
  * Servlet implementation class AjoutPanierServlet
  */
@@ -34,8 +36,30 @@ public class AjoutPanierServlet extends HttpServlet {
 		RequestDispatcher dispatcher;
 		if(from.equalsIgnoreCase("cafe")) {
 			dispatcher = request.getRequestDispatcher("NosCafes");
+			final HttpSession htse = request.getSession();
+			final RequestDispatcher dis = request.getRequestDispatcher("NosCafes");
+			if(htse.getAttribute("utilRole") != null) {
+				final Role role2 = (Role) htse.getAttribute("utilRole");
+				String affichage = "";
+				if(role2.getIdRole() == 2) {
+					affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+				}
+				affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+				request.setAttribute("affichageNav", affichage);
+			}
 		} else {
 			dispatcher = request.getRequestDispatcher("NosTasses");
+			final HttpSession htse = request.getSession();
+			final RequestDispatcher dis = request.getRequestDispatcher("NosTasses");
+			if(htse.getAttribute("utilRole") != null) {
+				final Role role2 = (Role) htse.getAttribute("utilRole");
+				String affichage = "";
+				if(role2.getIdRole() == 2) {
+					affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+				}
+				affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+				request.setAttribute("affichageNav", affichage);
+			}
 		}
 		Integer quantity = Integer.parseInt(quantityStr);
 		final HttpSession session = request.getSession();

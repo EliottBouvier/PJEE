@@ -46,6 +46,17 @@ public class InscriptionServlet extends HttpServlet {
 		final String cp = request.getParameter("utilCP");
 		final String ville = request.getParameter("utilVille");
 		final String cb = request.getParameter("utilCB");
+		final HttpSession htse = request.getSession();
+		final RequestDispatcher dis = request.getRequestDispatcher("inscription.jsp");
+		if(htse.getAttribute("utilRole") != null) {
+			final Role role2 = (Role) htse.getAttribute("utilRole");
+			String affichage = "";
+			if(role2.getIdRole() == 2) {
+				affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+			}
+			affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+			request.setAttribute("affichageNav", affichage);
+		}
 		final RequestDispatcher dispatcher = request.getRequestDispatcher("inscription.jsp");
 		
 		if(mail == "" | nom == "" | prenom == "" | password == "" | tel == "" | adresse == "" | cp == "" | ville == "" | cb == "") {

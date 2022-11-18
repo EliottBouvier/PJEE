@@ -49,6 +49,17 @@ public class AdminClient extends HttpServlet {
 			if(utilisateurs == null) {
 				
 			} else {
+				final HttpSession htse = request.getSession();
+				final RequestDispatcher dis = request.getRequestDispatcher("articles.jsp");
+				if(htse.getAttribute("utilRole") != null) {
+					final Role role2 = (Role) htse.getAttribute("utilRole");
+					String affichage = "";
+					if(role2.getIdRole() == 2) {
+						affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+					}
+					affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+					request.setAttribute("affichageNav", affichage);
+				}
 				final StringBuilder stringBuilder = new StringBuilder();
 				stringBuilder.append("<table class=\"tftable\" border=\"1\"><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Numéro de Tel</th><th>Adresse</th><th>Code Postal</th><th>Ville</th></tr>");
 				utilisateurs.forEach(util -> {

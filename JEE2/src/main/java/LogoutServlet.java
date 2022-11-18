@@ -1,12 +1,16 @@
 
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import models.Role;
 
 /**
  * Servlet implementation class LogoutServlet
@@ -31,7 +35,18 @@ public class LogoutServlet extends HttpServlet {
 		if(httpSession.getAttribute("utilPrenom") != null) {
 			httpSession.invalidate();
 		}
-		response.sendRedirect("accueil.jsp");
+		final HttpSession htse = request.getSession();
+		final RequestDispatcher dis = request.getRequestDispatcher("Accueil");
+		if(htse.getAttribute("utilRole") != null) {
+			final Role role2 = (Role) htse.getAttribute("utilRole");
+			String affichage = "";
+			if(role2.getIdRole() == 2) {
+				affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+			}
+			affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+			request.setAttribute("affichageNav", affichage);
+		}
+		response.sendRedirect("Accueil");
 	}
 
 }

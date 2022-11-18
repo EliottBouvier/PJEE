@@ -21,6 +21,7 @@ import models.Banque;
 import models.Commande;
 import models.EtatCommande;
 import models.Facture;
+import models.Role;
 
 /**
  * Servlet implementation class PaiementProcessServlet
@@ -52,7 +53,18 @@ public class PaiementProcessServlet extends HttpServlet {
 		final String cvc = (String) request.getAttribute("cvc");
 		final String expir = (String) request.getAttribute("dateExp");
 		if(utilID == null || utilID.equalsIgnoreCase("")) {
-			response.sendRedirect("authentification.jsp");
+			final HttpSession htse = request.getSession();
+			final RequestDispatcher dis = request.getRequestDispatcher("authentification.jsp");
+			if(htse.getAttribute("utilRole") != null) {
+				final Role role2 = (Role) htse.getAttribute("utilRole");
+				String affichage = "";
+				if(role2.getIdRole() == 2) {
+					affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+				}
+				affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+				request.setAttribute("affichageNav", affichage);
+			}
+			dis.forward(request, response);
 			return;
 		}
 
@@ -112,7 +124,18 @@ public class PaiementProcessServlet extends HttpServlet {
 		facture.setFactHt(totalHT);
 		this.saveFacture(facture);
 		httpSession.removeAttribute("panier");
-		response.sendRedirect("accueil.jsp");
+		final HttpSession htse = request.getSession();
+		final RequestDispatcher dis = request.getRequestDispatcher("Accueil");
+		if(htse.getAttribute("utilRole") != null) {
+			final Role role2 = (Role) htse.getAttribute("utilRole");
+			String affichage = "";
+			if(role2.getIdRole() == 2) {
+				affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+			}
+			affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+			request.setAttribute("affichageNav", affichage);
+		}
+		dis.forward(request, response);
 	}
 	
 	private void saveArticle(Article article) {

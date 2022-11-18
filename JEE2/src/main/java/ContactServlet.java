@@ -8,10 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.hibernate.Session;
 
 import models.Contact;
+import models.Role;
 
 /**
  * Servlet implementation class ContactServlet
@@ -37,7 +39,17 @@ public class ContactServlet extends HttpServlet {
 		final String email = request.getParameter("email");
 		final String contenu = request.getParameter("contenu");
 		final RequestDispatcher dispatcher = request.getRequestDispatcher("/contact.jsp");
-		
+		final HttpSession htse = request.getSession();
+		final RequestDispatcher dis = request.getRequestDispatcher("contact.jsp");
+		if(htse.getAttribute("utilRole") != null) {
+			final Role role2 = (Role) htse.getAttribute("utilRole");
+			String affichage = "";
+			if(role2.getIdRole() == 2) {
+				affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+			}
+			affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+			request.setAttribute("affichageNav", affichage);
+		}
 		if(prenom == "" || nom == "" || email == "" || contenu == "") {
 			request.setAttribute("result", "<center><p style=\"color:wheat\";>Un des champs est vide !</p></center>");
 			dispatcher.forward(request, response);

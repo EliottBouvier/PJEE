@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
 
 import models.Article;
+import models.Role;
 
 /**
  * Servlet implementation class VoirPanierServlet
@@ -36,8 +37,19 @@ public class VoirPanierServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		final HttpSession httpSession = request.getSession();
-		final RequestDispatcher requestDispatcher = request.getRequestDispatcher("/panier.jsp");
+		final RequestDispatcher requestDispatcher = request.getRequestDispatcher("panier.jsp");
 		if(httpSession.getAttribute("panier") ==  null || httpSession.getAttribute("panier") == "") {
+			final HttpSession htse = request.getSession();
+			final RequestDispatcher dis = request.getRequestDispatcher("panier.jsp");
+			if(htse.getAttribute("utilRole") != null) {
+				final Role role2 = (Role) htse.getAttribute("utilRole");
+				String affichage = "";
+				if(role2.getIdRole() == 2) {
+					affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+				}
+				affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+				request.setAttribute("affichageNav", affichage);
+			}
 			request.setAttribute("result", "<center>Le panier est vide !</center>");
 			requestDispatcher.forward(request, response);
 		} else {
@@ -65,6 +77,17 @@ public class VoirPanierServlet extends HttpServlet {
 			result += "</tr></tbody></table>";
 			result += "<a href=\"PaiementServlet\"> <button class=\"btnpayer\"> PASSER COMMANDE </button> </a>";
 			request.setAttribute("affichage", result);
+			final HttpSession htse = request.getSession();
+			final RequestDispatcher dis = request.getRequestDispatcher("articles.jsp");
+			if(htse.getAttribute("utilRole") != null) {
+				final Role role2 = (Role) htse.getAttribute("utilRole");
+				String affichage = "";
+				if(role2.getIdRole() == 2) {
+					affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+				}
+				affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+				request.setAttribute("affichageNav", affichage);
+			}
 			requestDispatcher.forward(request, response);
 		}
 	}

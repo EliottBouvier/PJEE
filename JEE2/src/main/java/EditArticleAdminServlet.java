@@ -75,6 +75,17 @@ public class EditArticleAdminServlet extends HttpServlet {
 						+ "		</div>\r\n"
 						+ "	</form>\r\n"
 						+ "</div>";
+				final HttpSession htse = request.getSession();
+				final RequestDispatcher dis = request.getRequestDispatcher("edit.jsp");
+				if(htse.getAttribute("utilRole") != null) {
+					final Role role2 = (Role) htse.getAttribute("utilRole");
+					String affichageNav = "";
+					if(role2.getIdRole() == 2) {
+						affichageNav = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+					}
+					affichageNav += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+					request.setAttribute("affichageNav", affichageNav);
+				}
 				RequestDispatcher requestDispatcher = request.getRequestDispatcher("edit.jsp");
 				request.setAttribute("affichage", affichage);
 				requestDispatcher.forward(request, response);

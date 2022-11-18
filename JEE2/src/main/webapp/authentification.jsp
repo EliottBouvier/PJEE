@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <% if(session.getAttribute("utilPrenom") != null) {
-	response.sendRedirect("accueil.jsp");
+	response.sendRedirect("VoirCommande");
 }
 %>
 <head>
@@ -13,20 +13,19 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-	<nav>
+<nav>
 		<div class="nav-content">
 			<div class="logo">
-				<a href="http://localhost:8080/JEE2/inscription.jsp"> Kahoueh. </a>
+				<a href="Accueil"> Kahoueh. </a>
 			</div>
 		<ul class="nav-links">
-			<li><a href="http://localhost:8080/JEE2/accueil.jsp"> Accueil </a></li>
-			<li><a href="http://localhost:8080/JEE2/cafes.jsp"> Nos Cafés </a></li>
-			<li><a href="http://localhost:8080/JEE2/tasse.jsp"> Nos Tasses </a></li>
-			<li><a href="http://localhost:8080/JEE2/contact.jsp"> Contact </a></li>
-			<li><a href="http://localhost:8080/JEE2/panier.jsp"> Panier </a></li>
-			<li><a href="http://localhost:8080/JEE2/authentification.jsp"> <i class="fas fa-user"></i> </a></li>
-			<li><a href="http://localhost:8080/JEE2/admin.jsp"> <i class="fas fa-cog"></i> </a></li>
-			<li><a href="http://localhost:8080/JEE2/deco.jsp"> <i class="fas fa-sign-out-alt"></i> </a></li>
+			<li><a href="Accueil"> Accueil </a></li>
+			<li><a href="NosCafes"> Nos Cafés </a></li>
+			<li><a href="NosTasses"> Nos Tasses </a></li>
+			<li><a href="contact.jsp"> Contact </a></li>
+			<li><a href="VoirPanierServlet"> Panier </a></li>
+			<li><a href="authentification.jsp"> <i class="fas fa-user"></i> </a></li>
+			${affichageNav}
 		</ul>
 		</div>
 	</nav>
@@ -43,17 +42,10 @@
 			<i class="fas fa-lock"></i>
 			<input type="password" name="mdp" id="mdp" placeholder="Mot de passe" maxlength="200" required >
 		</div>
-		
-		<a href="http://localhost:8080/JEE2/inscription.jsp">
-		<div class="inscrip">
-			 S'inscrire 
-		</div> 
-		</a>
-		
 		<div class="row button">
 			<input type="submit" value="Connexion">
 		</div>
-		
+		<button>Effacer</button>
 	</form>
 </div>
 <div class="footer-dark">

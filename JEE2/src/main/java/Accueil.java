@@ -31,15 +31,18 @@ public class Accueil extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		final HttpSession httpSession = request.getSession();
-		final RequestDispatcher requestDispatcher = request.getRequestDispatcher("accueil.jsp");
-		if(httpSession.getAttribute("utilRole") != null) {
-			final Role role = (Role) httpSession.getAttribute("utilRole");
+		final HttpSession htse = request.getSession();
+		final RequestDispatcher dis = request.getRequestDispatcher("accueil.jsp");
+		if(htse.getAttribute("utilRole") != null) {
+			final Role role = (Role) htse.getAttribute("utilRole");
+			String affichage = "";
 			if(role.getIdRole() == 2) {
-				request.setAttribute("affichage", "<li><a href=\"http://localhost:8080/JEE2/admin.jsp\"> <i class=\"fas fa-cog\"></i> </a></li>");	
+				affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
 			}
+			affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+			request.setAttribute("affichageNav", affichage);
 		}
-		requestDispatcher.forward(request, response);
+		dis.forward(request, response);
 	}
 
 	/**

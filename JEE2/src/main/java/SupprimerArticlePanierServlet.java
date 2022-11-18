@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import models.Role;
+
 /**
  * Servlet implementation class SupprimerArticlePanierServlet
  */
@@ -33,6 +35,17 @@ public class SupprimerArticlePanierServlet extends HttpServlet {
 		final Integer idArticleint = Integer.parseInt(idArticle);
 		final HttpSession httpSession = request.getSession();
 		final RequestDispatcher requestDispatcher = request.getRequestDispatcher("panier.jsp");
+		final HttpSession htse = request.getSession();
+		final RequestDispatcher dis = request.getRequestDispatcher("panier.jsp");
+		if(htse.getAttribute("utilRole") != null) {
+			final Role role2 = (Role) htse.getAttribute("utilRole");
+			String affichage = "";
+			if(role2.getIdRole() == 2) {
+				affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+			}
+			affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+			request.setAttribute("affichageNav", affichage);
+		}
 		String panier = (String) httpSession.getAttribute("panier");
 		final String[] articles = panier.split(";");
 		if(articles.length == 1) {

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import org.hibernate.Session;
 
+import models.Role;
 import models.Utilisateur;
 
 /**
@@ -34,6 +35,17 @@ public class LoginServlet extends HttpServlet {
 		String id=request.getParameter("id");
 		String mdp=request.getParameter("mdp");
 		Utilisateur utilisateur = this.getUtilisateur(id, mdp);
+		final HttpSession htse = request.getSession();
+		final RequestDispatcher dis = request.getRequestDispatcher("authentification.jsp");
+		if(htse.getAttribute("utilRole") != null) {
+			final Role role2 = (Role) htse.getAttribute("utilRole");
+			String affichage = "";
+			if(role2.getIdRole() == 2) {
+				affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+			}
+			affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+			request.setAttribute("affichageNav", affichage);
+		}
 		final RequestDispatcher requestDispatcher = request.getRequestDispatcher("authentification.jsp");
 		if (utilisateur != null && BCrypt.checkpw(mdp, utilisateur.getUtilPassword())){
 			HttpSession session = request.getSession();
@@ -47,7 +59,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("utilVille", utilisateur.getUtilVille());
 			session.setAttribute("utilCB", utilisateur.getUtilCb());
 			session.setAttribute("utilRole", utilisateur.getRole());
-			response.sendRedirect("accueil.jsp");
+			response.sendRedirect("Accueil");
 		} else{
 			request.setAttribute("result", "<center><p style=\"color:wheat\";>L'identifiant ou le mot de passe est invalide !</p></center>");
 			requestDispatcher.forward(request, response);

@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
 
 import models.Banque;
+import models.Role;
 
 /**
  * Servlet implementation class PaiementServlet
@@ -42,6 +43,17 @@ public class PaiementServlet extends HttpServlet {
 		}
 		final Banque banqueCheck = this.getBanque(((String)httpSession.getAttribute("utilCB")));
 		final RequestDispatcher requestDispatcher = request.getRequestDispatcher("paiement.jsp");
+		final HttpSession htse = request.getSession();
+		final RequestDispatcher dis = request.getRequestDispatcher("paiement.jsp");
+		if(htse.getAttribute("utilRole") != null) {
+			final Role role2 = (Role) htse.getAttribute("utilRole");
+			String affichage = "";
+			if(role2.getIdRole() == 2) {
+				affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+			}
+			affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+			request.setAttribute("affichageNav", affichage);
+		}
 		request.setAttribute("numCarte", "<input type=\"text\" name=\"cb\" placeholder=\"" + banqueCheck.getNumCarte() + "\" maxlength=\"30\" readonly>");
 		requestDispatcher.forward(request, response);
 	}

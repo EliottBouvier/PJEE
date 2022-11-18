@@ -38,7 +38,7 @@ public class AdminArticles extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		final HttpSession httpSession = request.getSession();
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("accueil.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("Accueil");
 		if(httpSession.getAttribute("utilRole") != null) {
 			final Role role = (Role) httpSession.getAttribute("utilRole");
 			if(role.getIdRole() != 2) {
@@ -49,6 +49,17 @@ public class AdminArticles extends HttpServlet {
 			if(utilisateurs == null) {
 				
 			} else {
+				final HttpSession htse = request.getSession();
+				final RequestDispatcher dis = request.getRequestDispatcher("articles.jsp");
+				if(htse.getAttribute("utilRole") != null) {
+					final Role role2 = (Role) htse.getAttribute("utilRole");
+					String affichage = "";
+					if(role2.getIdRole() == 2) {
+						affichage = "<li><a href=\"AdminClient\"> <i class=\"fas fa-cog\"></i> </a></li>";	
+					}
+					affichage += "<li><a href=\"LogoutServlet\"> <i class=\"fas fa-sign-out-alt\"></i> </a></li>";
+					request.setAttribute("affichageNav", affichage);
+				}
 				final StringBuilder stringBuilder = new StringBuilder();
 				stringBuilder.append("<table class=\"tftable\" border=\"1\"><tr><th>Article</th><th>Stock</th><th>Prix</th><th>TVA</th><th>Marque</th><th>Catégorie</th><th>Contrôle</th></tr>");
 				utilisateurs.forEach(article -> {

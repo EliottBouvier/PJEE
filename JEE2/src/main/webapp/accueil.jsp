@@ -20,8 +20,7 @@
 			<li><a href="contact.jsp"> Contact </a></li>
 			<li><a href="VoirPanierServlet"> Panier </a></li>
 			<li><a href="authentification.jsp"> <i class="fas fa-user"></i> </a></li>
-			${affichage}
-			<li><a href="http://localhost:8080/JEE2/deco.jsp"> <i class="fas fa-sign-out-alt"></i> </a></li>	
+			${affichageNav}
 		</ul>
 		</div>
 	</nav>
