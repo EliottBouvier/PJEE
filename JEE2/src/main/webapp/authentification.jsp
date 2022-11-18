@@ -42,10 +42,17 @@
 			<i class="fas fa-lock"></i>
 			<input type="password" name="mdp" id="mdp" placeholder="Mot de passe" maxlength="200" required >
 		</div>
+		
+		<a href="http://localhost:8080/JEE2/inscription.jsp">
+		<div class="inscrip">
+			 S'inscrire 
+		</div> 
+		</a>
+		
 		<div class="row button">
 			<input type="submit" value="Connexion">
 		</div>
-		<button>Effacer</button>
+		
 	</form>
 </div>
 <div class="footer-dark">
