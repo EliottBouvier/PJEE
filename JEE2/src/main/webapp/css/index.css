@@ -587,6 +587,16 @@ border-radius: 18px;
   color: wheat;
 }
 
+.container1 .title3{
+  line-height: 80px;
+  position: static;
+  font-size: 35px;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+  padding-left: 18.5%;
+  color: wheat;
+}
+
 .container12 .title2{
   line-height: 80px;
   position: static;

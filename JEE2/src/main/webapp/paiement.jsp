@@ -27,7 +27,7 @@
 	
 <div class="container1">
 	${result}
-    <div class="title"><span> Vérifications de paiement </span></div>
+    <div class="title3"><span> Vérifications de paiement </span></div>
     <form name="Enregistrement" method="post" action="ContactServlet">
     
         <div class="user-details">
@@ -44,10 +44,8 @@
 
             <div class="input-box">
                 <span class="details">Date d'expiration</span>
-                <input type="email" name="dateExp">
+                <input type="date" name="dateExp">
             </div>
-
-          
 
         </div>
 
