@@ -7,6 +7,7 @@
 <title>Authentification</title>
 <link rel="stylesheet" type="text/css" href="http://localhost:8080/JEE2/css/index.css">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="js/increment.js" type="text/javascript"></script>
 </head>
 <body>
 	<nav>

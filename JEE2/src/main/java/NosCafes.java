@@ -59,9 +59,9 @@ public class NosCafes extends HttpServlet {
 				resultBuilder.append("<input type=\"text\" name=\"id\" id=\"id\" value=\"" + (article.getArtId()-1) + "\" hidden>");
 				resultBuilder.append("<p class=\"textP\"> " + article.getArtDesc() + " </p>");
 				resultBuilder.append("<p class=\"textMC\"> <span class=\"marque\">" + article.getMarque().getMarqueNom() + "</span> <span class=\"catégorie\">" + article.getCategorie().getCatNom() + "</span> </p>");
-				resultBuilder.append("<div class=\"divQP\"><div class=\"btnQuantite\"><span class=\"minus\">-</span>");
-				resultBuilder.append("<input type=\"text\" name=\"quantity\" id=\"quantity\" value=\"1\" hidden><span class=\"num\">01</span>");
-				resultBuilder.append("<span class=\"plus\">+</span></div><p style=\"text-align: right;\">A partir de </p>");
+				resultBuilder.append("<div class=\"divQP\"><div class=\"btnQuantite\"><span onclick=\"removeIncrement(this);\" class=\"minus\" id=\"" + (article.getArtId()-1) + "\">-</span>");
+				resultBuilder.append("<input type=\"text\" name=\"quantity-" + (article.getArtId()-1) + "\" id=\"quantity-" + (article.getArtId()-1) + "\" value=\"1\" hidden><span class=\"num\" id=\"num-" + (article.getArtId()-1) + "\" >1</span>");
+				resultBuilder.append("<span onclick=\"addIncrement(this);\" id=\"" + (article.getArtId()-1) + "\"  class=\"plus\">+</span></div><p style=\"text-align: right;\">A partir de </p>");
 				resultBuilder.append("<h3 class=\"price\">" + article.getArtPrix() + "€</h3>");
 				resultBuilder.append("</div></div></div><div class=\"ajouterPanier\"><input type=\"submit\" value=\"Ajouter au panier\"></div></form></div>");
 			}

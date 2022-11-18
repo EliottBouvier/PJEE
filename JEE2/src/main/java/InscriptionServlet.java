@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,11 +46,11 @@ public class InscriptionServlet extends HttpServlet {
 		final String cp = request.getParameter("utilCP");
 		final String ville = request.getParameter("utilVille");
 		final String cb = request.getParameter("utilCB");
+		final RequestDispatcher dispatcher = request.getRequestDispatcher("inscription.jsp");
 		
 		if(mail == "" | nom == "" | prenom == "" | password == "" | tel == "" | adresse == "" | cp == "" | ville == "" | cb == "") {
-			/* TODO:
-			 * Un des champs est vide renvoyer une erreur
-			 */
+			request.setAttribute("result", "<center><p style=\"color:wheat\";>Un des champs est vide !</p></center>");
+			dispatcher.forward(request, response);
 			return;
 		}
 		
@@ -76,12 +77,12 @@ public class InscriptionServlet extends HttpServlet {
 			session.setAttribute("utilCP", utilisateur.getUtilCp());
 			session.setAttribute("utilVille", utilisateur.getUtilVille());
 			session.setAttribute("utilCB", utilisateur.getUtilCb());
-			response.sendRedirect("accueil.jsp");
+			request.setAttribute("result", "<center><p style=\"color:wheat\";>Vous êtes bien inscrit !</p></center>");
+			dispatcher.forward(request, response);
 			return;
 		}
-		/* TODO:
-		 * Utilisateur non valide (mail ou tel) renvoyer une erreur 
-		 */
+		request.setAttribute("result", "<center><p style=\"color:wheat\";>Un utilisateur avec cette adresse email ou ce téléphone existe déjà !</p></center>");
+		dispatcher.forward(request, response);
 	}
 	
 	/**
