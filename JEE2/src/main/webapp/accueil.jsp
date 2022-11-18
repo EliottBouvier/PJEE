@@ -27,7 +27,7 @@
 	
 <div class="carousel">
   <div class="carousel-inner">
-    <!-- Bloco da imagem 1 -->
+    <!-- Bloc images 1 -->
     <input
       class="carousel-open"
       type="radio"
@@ -42,7 +42,7 @@
         src="images/cafe1.jpg"
       />
     </div>
-    <!-- Bloco da imagem 2 -->
+    <!-- Bloc image 2 -->
     <input
       class="carousel-open"
       type="radio"
@@ -53,10 +53,10 @@
     />
     <div class="carousel-item">
       <img
-        src="images/cafe2.jpg"
+        src="images/cafe4.jpg"
       />
     </div>
-    <!-- Bloco da imagem 3 -->
+    <!-- Bloc image 3 -->
     <input
       class="carousel-open"
       type="radio"
@@ -67,13 +67,12 @@
     />
     <div class="carousel-item">
       <img
-        src="images/cafe3.jpg"
+        src="images/cafe5.jpg"
       />
     </div>
 
-    <!-- Pode adicionar mais blocos de imagens aqui -->
 
-    <!-- Adicionar o prev de acordo com a quantidade de páginas que adicionar -->
+
     <label for="carousel-1" class="carousel-control prev control-2">‹</label>
     <label for="carousel-2" class="carousel-control prev control-3">‹</label>
     <label for="carousel-3" class="carousel-control prev control-1">‹</label>
@@ -81,11 +80,7 @@
     <label for="carousel-1" class="carousel-control next control-3">›</label>
     <label for="carousel-2" class="carousel-control next control-1">›</label>
     <label for="carousel-3" class="carousel-control next control-2">›</label>
-    <!-- 
-        Abaixo são os indicadores da página ativa. Se não quiser basta remover. 
-        E caso adicione mais páginas, é preciso adicionar mais itens e alterar 
-        a numeração 
-    -->
+
     <ol class="carousel-indicators">
       <li>
         <label for="carousel-1" class="carousel-bullet">•</label>
@@ -121,8 +116,8 @@
 	<div class="card">
   	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
   	<div class="cardcontain">
-    <p><b>Café aka</b></p>
-    <p>viens de loin</p>
+    <p class="textP">  Arabica: Café de Paris </p>
+    <p>Fort, puissant</p>
     <p style="text-align: right;">A partir de </p>
     <h3 class="price">10.99 €</h3>
   </div>
@@ -134,8 +129,8 @@
 	<div class="card">
   	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
   	<div class="cardcontain">
-    <p><b>Café aka</b></p>
-    <p>viens de loin</p>
+	<p class="textP">  Arabica : café matin légé </p>
+    <p>Savoureux, onctueux</p>
     <p style="text-align: right;">A partir de </p>    
     <h3 class="price">10.99 €</h3>
   </div>
@@ -147,8 +142,8 @@
 	<div class="card">
   	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
   	<div class="cardcontain">
-    <p><b>Café aka</b></p>
-    <p>viens de loin</p>
+	<p class="textP">  Robusta: Café noir corsé </p>
+    <p>Ideal pour le Matin ! </p>
     <p style="text-align: right;">A partir de </p>
     <h3 class="price">10.99 €</h3>
   </div>
@@ -161,8 +156,8 @@
 	<div class="card">
   	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
   	<div class="cardcontain">
-    <p><b>Café aka</b></p>
-    <p>viens de loin</p>
+	<p class="textP">  Tasse </p>
+    <p>Tasse etanche ! </p>
     <p style="text-align: right;">A partir de </p>
     <h3 class="price">10.99 €</h3>
   </div>
