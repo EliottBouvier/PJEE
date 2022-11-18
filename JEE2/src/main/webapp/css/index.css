@@ -106,7 +106,7 @@ nav.sticky .nav-links li a:hover{
 .carousel-item img {
     display: block;
     position: relative;
-    max-height: 550px;
+    height: 625px;
     width: 100%;
 }
 
@@ -997,7 +997,7 @@ td button:hover{
   font-size:20px;
   margin-bottom:0;
   color: wheat;
-  text-align: center;
+
 }
 
 

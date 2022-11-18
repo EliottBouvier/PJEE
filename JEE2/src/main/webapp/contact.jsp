@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-md-6 item text" id='about'>
                         <h3>Kahoueh Industries</h3>
-                        <p>.</p>
+
                     </div> 
                 </div>
                 <p class="copyright"> Kahoueh Industries © 2022  </p>
