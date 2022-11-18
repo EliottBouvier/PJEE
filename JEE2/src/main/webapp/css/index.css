@@ -399,7 +399,122 @@ justify-self: center;
   padding: 6% 0 0 0;
 
 }
+/*-----------------------------ADMIN-------------------------------*/
+/*Reset CSS*/
+.Mennu{
+	text-align: center;
+}
+.Mennulist{
+    width: 100%;
+    margin: 0px auto 40px auto;
+    background-color: #f5efe6;
+    position: sticky;
+    top: 0px;
+}
 
+.Mennulist ul{
+    list-style-type: none;
+    border-bottom: solid;
+    border-bottom-color: black;
+}
+
+.Mennulist li{
+    float: left;
+    width: 33%;/*100% divisé par le nombre d'éléments de menu*/
+    text-align: center;/*Centre le texte dans les éléments de menu*/
+   	font-size: 15px;
+	font-weight: 500;
+}
+
+/*Evite que le menu n'ait une hauteur nulle*/
+.Mennulist ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.Mennulist a{
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
+    padding: 10px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+.Mennulist a:hover{
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.tabs { 
+    width: 100%;
+    margin: 0px auto 40px auto;
+    background-color: #f5efe6;
+    position: sticky;
+    top: 0px;
+}
+
+.tabs .tab-registers {
+    display: flex;
+    background-color: #f5efe6;
+}
+
+
+.tabs button {
+    padding: 0.5em;
+    background-color: RGB(255, 255, 255);
+    border: none;
+    font: inherit;
+    width: 33%;
+    color: Black;
+    background-color: #f5efe6;
+}
+
+.tabs .tab-registers button:hover {
+    cursor: pointer;
+}
+
+.tabs .tab-bodies {
+    padding: 0.5em;
+    background-color: RGB(235, 235, 235);
+    flex-grow: 1;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.tabs button.active-tab {
+    background-color: #f5efe6;
+    border-bottom: 2px solid black;
+}
+.conteneurx {
+	text-align: center;
+}
+.tftable {
+	font-size:12px;
+	color:#333333;
+	width:100%;
+	border-width: 1px;
+	border-color: #ebab3a;
+	border-collapse: collapse;}
+
+.tftable th {
+	font-size:12px;
+	background-color:#e6983b;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #ebab3a;
+	text-align:left;}
+.tftable tr {
+	background-color:#f0c169;}
+.tftable td {
+	font-size:12px;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #ebab3a;}
+.tftable tr:hover {
+	background-color:#ffffff;}
 /*--------------------------- PAGE DE CAFE -----------------------------------*/
 
 .parent {
