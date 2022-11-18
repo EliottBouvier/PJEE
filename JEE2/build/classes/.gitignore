@@ -1,2 +1,6 @@
-/BCrypt.class
+/LoginAdminServlet.class
+/LoginServlet.class
+/LogoutServlet.class
 /VoirPanierServlet.class
+/models/
+/.gitignore

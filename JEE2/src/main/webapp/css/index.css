@@ -558,6 +558,18 @@ border-radius: 18px;
  
 }
 
+.container12{
+  margin-top: 7%;
+  margin-left: 31%;
+  max-width: 700px;
+  width: 100%;
+  height: 750px;
+  background: #88421D;
+  padding: 25px 25px 25px 25px;
+  border-radius: 10px;
+ 
+}
+
 .container1 .title{
   line-height: 80px;
   position: static;
@@ -568,13 +580,36 @@ border-radius: 18px;
   color: wheat;
 }
 
+.container12 .title2{
+  line-height: 80px;
+  position: static;
+  font-size: 35px;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+  padding-left: 35%;
+  color: wheat;
+}
+
 .container1 form{
   color: wheat;
   padding-left: 5px;
   height: 400px;
 }
 
+.container12 form{
+  color: wheat;
+  padding-left: 5px;
+  height: 400px;
+}
+
 .container1 form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.container12 form .user-details{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
