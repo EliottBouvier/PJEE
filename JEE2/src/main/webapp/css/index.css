@@ -106,7 +106,7 @@ nav.sticky .nav-links li a:hover{
 .carousel-item img {
     display: block;
     position: relative;
-    max-height: 550px;
+    height: 625px;
     width: 100%;
 }
 
@@ -322,6 +322,17 @@ justify-self: center;
 	border-radius: 10px 10px 0 0;
 }
 
+.txtacc p{
+		text-align: center;
+		justify-content: center;
+}
+.txtacc span{
+		font-family: georgia, palatino, serif;
+		color: #800000;
+		font-size: 22px;
+		font-weight: 600;
+}
+
 
 /* --------------------------- BOITE DE CONNEXION ------------------------------------- */
 
@@ -399,6 +410,24 @@ justify-self: center;
   padding: 6% 0 0 0;
 
 }
+
+.txtacc p{
+	text-align: center;
+	font-weight: 600;
+	font-size: 22px;
+}
+
+.txtacc span{
+ font-family: georgia, palatino, serif;
+ color: #800000;
+  
+}
+
+.img1 {
+width: 500px;
+height: 300px; 
+}
+
 /*-----------------------------ADMIN-------------------------------*/
 /*Reset CSS*/
 .Mennu{
@@ -968,7 +997,9 @@ td button:hover{
   font-size:20px;
   margin-bottom:0;
   color: wheat;
+
 }
+
 
 
 

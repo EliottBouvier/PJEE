@@ -21,6 +21,7 @@
 			<li><a href="VoirPanierServlet"> Panier </a></li>
 			<li><a href="authentification.jsp"> <i class="fas fa-user"></i> </a></li>
 			${affichage}
+			<li><a href="http://localhost:8080/JEE2/deco.jsp"> <i class="fas fa-sign-out-alt"></i> </a></li>	
 		</ul>
 		</div>
 	</nav>
@@ -50,10 +51,11 @@
       name="carousel"
       aria-hidden="true"
       hidden=""
+      checked="checked"
     />
     <div class="carousel-item">
       <img
-        src="images/cafe4.jpg"
+        src="images/cafe2.jpg"
       />
     </div>
     <!-- Bloc image 3 -->
@@ -67,19 +69,83 @@
     />
     <div class="carousel-item">
       <img
+        src="images/cafe3.jpg"
+      />
+    </div>
+    <!-- Bloc image 4 -->
+    <input
+      class="carousel-open"
+      type="radio"
+      id="carousel-4"
+      name="carousel"
+      aria-hidden="true"
+      hidden=""
+    />
+    <div class="carousel-item">
+      <img
+        src="images/cafe4.jpg"
+      />
+    </div>
+    <!-- Bloc image 5 -->
+    <input
+      class="carousel-open"
+      type="radio"
+      id="carousel-5"
+      name="carousel"
+      aria-hidden="true"
+      hidden=""
+    />
+    <div class="carousel-item">
+      <img
         src="images/cafe5.jpg"
       />
     </div>
-
-
+    <!-- Bloc image 6 -->
+    <input
+      class="carousel-open"
+      type="radio"
+      id="carousel-6"
+      name="carousel"
+      aria-hidden="true"
+      hidden=""
+    />
+    <div class="carousel-item">
+      <img
+        src="images/cafe6.jpeg"
+      />
+    </div>
+    <!-- Bloc image 7 -->
+    <input
+      class="carousel-open"
+      type="radio"
+      id="carousel-7"
+      name="carousel"
+      aria-hidden="true"
+      hidden=""
+    />
+    <div class="carousel-item">
+      <img
+        src="images/cafe7.jpg"
+      />
+    </div>
 
     <label for="carousel-1" class="carousel-control prev control-2">‹</label>
     <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-    <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-    <!-- Adicionar o next de acordo com a quantidade de páginas que adicionar -->
-    <label for="carousel-1" class="carousel-control next control-3">›</label>
+    <label for="carousel-3" class="carousel-control prev control-4">‹</label>
+    
+    <label for="carousel-4" class="carousel-control prev control-5">‹</label>
+    <label for="carousel-5" class="carousel-control prev control-6">‹</label>
+    <label for="carousel-6" class="carousel-control prev control-7">‹</label>
+    <label for="carousel-7" class="carousel-control prev control-1">‹</label>
+    
+    <label for="carousel-1" class="carousel-control next control-7">›</label>
     <label for="carousel-2" class="carousel-control next control-1">›</label>
     <label for="carousel-3" class="carousel-control next control-2">›</label>
+    <label for="carousel-4" class="carousel-control next control-3">›</label>
+    
+    <label for="carousel-5" class="carousel-control next control-4">›</label>
+    <label for="carousel-6" class="carousel-control next control-5">›</label>
+    <label for="carousel-7" class="carousel-control next control-6">›</label>
 
     <ol class="carousel-indicators">
       <li>
@@ -91,22 +157,40 @@
       <li>
         <label for="carousel-3" class="carousel-bullet">•</label>
       </li>
+      <li>
+        <label for="carousel-4" class="carousel-bullet">•</label>
+      </li>
+      <li>
+        <label for="carousel-5" class="carousel-bullet">•</label>
+      </li>
+      <li>
+        <label for="carousel-6" class="carousel-bullet">•</label>
+      </li>
+      <li>
+        <label for="carousel-7" class="carousel-bullet">•</label>
+      </li>
     </ol>
   </div>
 </div>
 
 <div class="cont">
 	<div class="txtacc">
+	<br> <br> <br>
+  	<p><span>Cr&eacute;e en 2015 Kahoueh est un revendeur de caf&eacute; en vrac unique.</span></p>
+	<p><span>Nous proposons des caf&eacute; moulus ou en grain. Un large panel de caf&eacute;s s&rsquo;offre &agrave; vous : arabica, Robusta, et m&ecirc;me le fameux et pris&eacute; Kowi Luwak. Vous trouverez des caf&eacute;s des 4 coins du monde pour un choix de saveurs toujours plus diversifi&eacute;.</span><br>
+	<span>D&egrave;s le d&eacute;but, nous avons fait le choix de privil&eacute;gier la qualit&eacute; et la vari&eacute;t&eacute; de nos produits. Pour cela Kahoueh s&rsquo;engage &agrave; utiliser des fournisseurs Locaux sur la totalit&eacute; des produits propos&eacute;.</span><br>
+	<span>De plus nous avons d&eacute;velopp&eacute; plusieurs partenariats avec des fournisseurs Sud-Americain, Africain et Asiatique de confiance qui nous accompagne depuis nos d&eacute;buts.</span><br>
+	<span>Nos caf&eacute;s sont ensuite torr&eacute;fi&eacute; dans nos installations proches de Paris. </span><br>
+	<span>Kahoueh s&rsquo;engage dans une d&eacute;marche &eacute;co-responsable et garantie des caf&eacute;s issus du commerce &eacute;quitable.</span></p>
+	
 	<br>
 	<br>
-	<p style="text-align: center;"><span style="font-family: georgia, palatino, serif; color: #800000;">Cr&eacute;e en 2015 Kahoueh est un revendeur de caf&eacute; en vrac unique.</span></p>
-<p style="text-align: center;"><span style="font-family: georgia, palatino, serif; color: #800000;">Nous proposons des caf&eacute; moulus ou en grain. Un large panel de caf&eacute;s s&rsquo;offre &agrave; vous : arabica, Robusta, et m&ecirc;me le fameux et pris&eacute; Kowi Luwak. Vous trouverez des caf&eacute;s des 4 coins du monde pour un choix de saveurs toujours plus diversifi&eacute;.</span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">D&egrave;s le d&eacute;but, nous avons fait le choix de privil&eacute;gier la qualit&eacute; et la vari&eacute;t&eacute; de nos produits. Pour cela Kahoueh s&rsquo;engage &agrave; utiliser des fournisseurs Locaux sur la totalit&eacute; des produits propos&eacute;.</span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">De plus nous avons d&eacute;velopp&eacute; plusieurs partenariats avec des fournisseurs Sud-Americain, Africain et Asiatique de confiance qui nous accompagne depuis nos d&eacute;buts.</span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">Nos caf&eacute;s sont ensuite torr&eacute;fi&eacute; dans nos installations proches de Paris. </span><br /><span style="font-family: georgia, palatino, serif; color: #800000;">Kahoueh s&rsquo;engage dans une d&eacute;marche &eacute;co-responsable et garantie des caf&eacute;s issus du commerce &eacute;quitable.</span></p></p>
+	<p><span>Avec l'arriv&eacute; de l'hiver et des faibles temp&eacute;ratures, nous vous proposons ce mois-ci une s&eacute;lection de caf&eacute; intenses et doux.</span>
+	<span>Parfait pour en profiter au coins du feu !&nbsp;</span>&nbsp;</p>
+	<br><br>
+	<p><span>Nos S&eacute;lections du moment</span></p>
+	</div>
 </div>
-<br>
-<br>
-<p style="text-align: center;"><span style="font-family: georgia, palatino, serif;"><span style="font-family: georgia, palatino, serif; color: #800000;">Avec l'arriv&eacute; de l'hiver et des faibles temp&eacute;ratures, nous vous proposons ce mois-ci une s&eacute;lection de caf&eacute; intenses et doux.</span><br /><spa style="font-family: georgia, palatino, serif; color: #800000;">Parfait pour en profiter au coins du feu !&nbsp;</span>&nbsp;</span></p>
-<br><br>
-<p style="text-align: center;"><span style="font-family: 'arial black', sans-serif; font-size: 14pt;"><strong><span style="font-family: georgia, palatino, serif;">Nos S&eacute;lections du moment</span></strong></span></p>
 <br>
 <br>
 <br>
@@ -114,57 +198,55 @@
 	
 	<div class="promo1"> 
 	<div class="card">
-  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
+  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg">
   	<div class="cardcontain">
     <p class="textP">  Arabica: Café de Paris </p>
     <p>Fort, puissant</p>
-    <p style="text-align: right;">A partir de </p>
-    <h3 class="price">10.99 €</h3>
-  </div>
-  <a href="cafes.jsp" class='card-link'></a>
-</div>
+    <p style="text-align: right;">Séléction du </p>
+    <h3 class="price">Moment</h3>
+  	</div>
+  	<a href="cafes.jsp" class='card-link'></a>
+	</div>
 	</div>
 	
 	<div class="promo2">
 	<div class="card">
-  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
+  	<img class="img1" src="https://factum-info.net/images/1_Fakty/5_Raznoe/34_2_kopi-luwak-1.jpg">
   	<div class="cardcontain">
-	<p class="textP">  Arabica : café matin légé </p>
+	<p class="textP"> Kowi Luwak: Café sensation Sahara </p>
     <p>Savoureux, onctueux</p>
-    <p style="text-align: right;">A partir de </p>    
-    <h3 class="price">10.99 €</h3>
-  </div>
-  <a href="cafes.jsp" class='card-link'></a>
-</div>
+    <p style="text-align: right;">Séléction du </p>    
+    <h3 class="price">Moment</h3>
+  	</div>
+  	<a href="cafes.jsp" class='card-link'></a>
+	</div>
 	</div>
 	
-		<div class="promo3">
+	<div class="promo3">
 	<div class="card">
-  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
+  	<img class="img1" src="https://www.cristallerie-de-paris.fr/image/article/tasse_et_soucoupe_a_cafe_prestige_gala_versace_24697.jpg">
   	<div class="cardcontain">
-	<p class="textP">  Robusta: Café noir corsé </p>
-    <p>Ideal pour le Matin ! </p>
-    <p style="text-align: right;">A partir de </p>
-    <h3 class="price">10.99 €</h3>
-  </div>
-  <a href="cafes.jsp" class='card-link'></a>
-</div>
+	<p class="textP">  Tasse prestige </p>
+    <p> La plus belle piéce de notre collection 24carats ! </p>
+    <p style="text-align: right;">Séléction du </p>
+    <h3 class="price">Moment</h3>
+  	</div>
+  	<a href="cafes.jsp" class='card-link'></a>
 	</div>
-	
-	
+	</div>
+
 	<div class="promo4">
 	<div class="card">
-  	<img class="img1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg" style="width:100%">
+  	<img class="img1" src="https://www.ikea.com/fr/fr/images/products/vaerdera-tasse-a-cafe-et-soucoupe-blanc__22811_pe095649_s5.jpg?f=s">
   	<div class="cardcontain">
-	<p class="textP">  Tasse </p>
-    <p>Tasse etanche ! </p>
-    <p style="text-align: right;">A partir de </p>
-    <h3 class="price">10.99 €</h3>
-  </div>
-  <a href="cafes.jsp" class='card-link'></a>
-</div>
+	<p class="textP">  Tasse Kahoueh </p>
+    <p>Parfaite pour vos degustations !  </p>
+    <p style="text-align: right;">Séléction du </p>
+    <h3 class="price">Moment</h3>
+  	</div>
+ 	 <a href="cafes.jsp" class='card-link'></a>
 	</div>
-	
+	</div>
 	
 </div>
 <br>
@@ -186,7 +268,6 @@
                     </div>
                     <div class="col-md-6 item text" id='about'>
                         <h3>Kahoueh Industries</h3>
-                        <p>.</p>
                     </div> 
                 </div>
                 <p class="copyright"> Kahoueh Industries © 2022  </p>

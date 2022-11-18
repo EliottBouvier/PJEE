@@ -2,10 +2,6 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<% if(session.getAttribute("utilPrenom") != null) {
-	response.sendRedirect("accueil.jsp");
-}
-%>
 <head>
 <meta charset="ISO-8859-1">
 <title>Authentification</title>
@@ -20,42 +16,83 @@
 			</div>
 		<ul class="nav-links">
 			<li><a href="http://localhost:8080/JEE2/accueil.jsp"> Accueil </a></li>
-			<li><a href="http://localhost:8080/JEE2/cafes.jsp"> Nos Cafés </a></li>
-			<li><a href="http://localhost:8080/JEE2/tasse.jsp"> Nos Tasses </a></li>
+			<li><a href="NosCafes"> Nos Cafés </a></li>
+			<li><a href="NosTasses"> Nos Tasses </a></li>
 			<li><a href="http://localhost:8080/JEE2/contact.jsp"> Contact </a></li>
 			<li><a href="http://localhost:8080/JEE2/panier.jsp"> Panier </a></li>
 			<li><a href="http://localhost:8080/JEE2/authentification.jsp"> <i class="fas fa-user"></i> </a></li>
-			<li><a href="http://localhost:8080/JEE2/admin.jsp"> <i class="fas fa-cog"></i> </a></li>
-			<li><a href="http://localhost:8080/JEE2/deco.jsp"> <i class="fas fa-sign-out-alt"></i> </a></li>
 		</ul>
 		</div>
 	</nav>
-	
-<div class="wrapper">
-	<div class="title"> <span>Authentification</span></div>
-	${result}
-	<form method="POST" action="LoginServlet">
-	<div class="row">
-			<i class="fas fa-user"></i>
-			<input type="text" name="id" id="id" placeholder="Email ou téléphone" maxlength="200" required>
-		</div>
-		<div class="row">
-			<i class="fas fa-lock"></i>
-			<input type="password" name="mdp" id="mdp" placeholder="Mot de passe" maxlength="200" required >
-		</div>
-		
-		<a href="http://localhost:8080/JEE2/inscription.jsp">
-		<div class="inscrip">
-			 S'inscrire 
-		</div> 
-		</a>
-		
+
+<table id="panier">
+	<caption>Votre Panier</caption>
+	<thead>
+	<tr>
+		<th>Article</th>
+		<th>Prix unité</th>
+		<th>Quantité</th>
+		<th>Total</th>
+		<th> Actions </th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td> <form id="form-1">
 		<div class="row button">
-			<input type="submit" value="Connexion">
+		<input type="submit" value="Retirer du panier">
 		</div>
-		
-	</form>
-</div>
+		</form>
+		 </td>
+	</tr>
+	<tr>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td> <form id="form-1">
+		<div class="row button">
+		<input type="submit" value="Retirer du panier">
+		</div>
+		</form>
+		 </td>
+	</tr>
+	<tr>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td> <form id="form-1">
+		<div class="row button">
+		<input type="submit" value="Retirer du panier">
+		</div>
+		</form>
+		 </td>
+	</tr>
+	<tr>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td>apu</td>
+		<td> 
+		<form id="form-1">
+		<div class="row button">
+		<input type="submit" value="Retirer du panier">
+		</div>
+		</form>
+		</td>
+	</tr>
+	
+	
+	</tbody>
+</table>
+
+<a href="http://localhost:8080/JEE2/paiement.jsp"> <button class="btnpayer"> PASSER COMMANDE </button> </a>
+
 <div class="footer-dark">
         <footer>
             <div class="container">

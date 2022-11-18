@@ -22,6 +22,7 @@
 			<li><a href="http://localhost:8080/JEE2/panier.jsp"> Panier </a></li>
 			<li><a href="http://localhost:8080/JEE2/authentification.jsp"> <i class="fas fa-user"></i> </a></li>
 			<li><a href="http://localhost:8080/JEE2/admin.jsp"> <i class="fas fa-cog"></i> </a></li>
+			<li><a href="http://localhost:8080/JEE2/deco.jsp"> <i class="fas fa-sign-out-alt"></i> </a></li>
 		</ul>
 		</div>
 	</nav>
@@ -79,7 +80,7 @@
                     </div>
                     <div class="col-md-6 item text" id='about'>
                         <h3>Kahoueh Industries</h3>
-                        <p>.</p>
+
                     </div> 
                 </div>
                 <p class="copyright"> Kahoueh Industries © 2022  </p>
