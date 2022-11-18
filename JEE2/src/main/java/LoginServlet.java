@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 		String mdp=request.getParameter("mdp");
 		Utilisateur utilisateur = this.getUtilisateur(id, mdp);
 		final RequestDispatcher requestDispatcher = request.getRequestDispatcher("authentification.jsp");
-		if (utilisateur != null){
+		if (utilisateur != null && BCrypt.checkpw(mdp, utilisateur.getUtilPassword())){
 			HttpSession session = request.getSession();
 			session.setAttribute("utilID", utilisateur.getUtilId());
 			session.setAttribute("utilMail", utilisateur.getUtilMail());
@@ -46,7 +46,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("utilCP", utilisateur.getUtilCp());
 			session.setAttribute("utilVille", utilisateur.getUtilVille());
 			session.setAttribute("utilCB", utilisateur.getUtilCb());
-			response.sendRedirect("after/successAuthentification.jsp");
+			response.sendRedirect("accueil.jsp");
 		} else{
 			request.setAttribute("result", "<center><p style=\"color:wheat\";>L'identifiant ou le mot de passe est invalide !</p></center>");
 			requestDispatcher.forward(request, response);
@@ -60,9 +60,9 @@ public class LoginServlet extends HttpServlet {
         List<Utilisateur> result = new ArrayList<>();
         
     	if(id.contains("@")) {
-            result = session.createQuery("from Utilisateur where utilMail = '" + id + "' AND utilPassword = '" + password + "'").list();
+            result = session.createQuery("from Utilisateur where utilMail = '" + id + "'").list();
     	} else {
-            result = session.createQuery("from Utilisateur where utilTel = '" + id + "' AND utilPassword = '" + password + "'").list();
+            result = session.createQuery("from Utilisateur where utilTel = '" + id + "'").list();
     	}
         session.close();
 

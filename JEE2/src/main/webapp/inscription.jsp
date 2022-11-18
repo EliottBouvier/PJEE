@@ -27,8 +27,8 @@
 	</nav>
 	
 <div class="container12">
-	${result}
     <div class="title2"><span>Inscriptions </span></div>
+    ${result}
     <form name="Enregistrement" method="post" action="InscriptionServlet">
     
         <div class="user-details">
