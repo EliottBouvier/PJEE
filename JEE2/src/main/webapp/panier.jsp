@@ -21,6 +21,7 @@
 			<li><a href="http://localhost:8080/JEE2/contact.jsp"> Contact </a></li>
 			<li><a href="http://localhost:8080/JEE2/panier.jsp"> Panier </a></li>
 			<li><a href="http://localhost:8080/JEE2/authentification.jsp"> <i class="fas fa-user"></i> </a></li>
+			<li><a href="http://localhost:8080/JEE2/admin.jsp"> <i class="fas fa-cog"></i> </a></li>
 		</ul>
 		</div>
 	</nav>
