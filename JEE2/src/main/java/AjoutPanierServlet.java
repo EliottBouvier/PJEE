@@ -30,8 +30,14 @@ public class AjoutPanierServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
 		String quantityStr = request.getParameter("quantity");
+		String from = request.getParameter("from");
+		RequestDispatcher dispatcher;
+		if(from.equalsIgnoreCase("cafe")) {
+			dispatcher = request.getRequestDispatcher("NosCafes");
+		} else {
+			dispatcher = request.getRequestDispatcher("NosTasses");
+		}
 		Integer quantity = Integer.parseInt(quantityStr);
-		final RequestDispatcher dispatcher = request.getRequestDispatcher("/cafes.jsp");
 		final HttpSession session = request.getSession();
 		String panier = "";
 		if(session.getAttribute("panier") != null) {
@@ -59,7 +65,7 @@ public class AjoutPanierServlet extends HttpServlet {
 		}
 		session.removeAttribute("panier");
 		session.setAttribute("panier", panier);
-        request.setAttribute("result", "L'article a bien été ajouté au panier !");
+        request.setAttribute("result", "<center><p style=\"color:#88421D\";>L'article a bien été ajouté au panier !</p></center>");
         dispatcher.forward(request, response);
 	}
 

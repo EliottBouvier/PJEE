@@ -32,6 +32,7 @@
 	
 <div class="wrapper">
 	<div class="title"> <span>Authentification</span></div>
+	${result}
 	<form method="POST" action="LoginServlet">
 	<div class="row">
 			<i class="fas fa-user"></i>

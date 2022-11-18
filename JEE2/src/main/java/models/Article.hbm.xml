@@ -1,13 +1,19 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 18 nov. 2022 ? 11:50:08 by Hibernate Tools 4.3.6.Final -->
+<!-- Generated 18 nov. 2022 ? 13:52:38 by Hibernate Tools 4.3.6.Final -->
 <hibernate-mapping>
     <class name="models.Article" table="Article" catalog="kahoueh" optimistic-lock="version">
         <id name="artId" type="java.lang.Integer">
             <column name="artID" />
             <generator class="identity" />
         </id>
+        <many-to-one name="categorie" class="models.Categorie" fetch="select">
+            <column name="artCategorie" />
+        </many-to-one>
+        <many-to-one name="marque" class="models.Marque" fetch="select">
+            <column name="artMarque" not-null="true" />
+        </many-to-one>
         <property name="artPrix" type="float">
             <column name="artPrix" precision="12" scale="0" not-null="true" />
         </property>
@@ -22,12 +28,6 @@
         </property>
         <property name="artTauxTva" type="float">
             <column name="artTauxTVA" precision="12" scale="0" not-null="true" />
-        </property>
-        <property name="artMarque" type="int">
-            <column name="artMarque" not-null="true" />
-        </property>
-        <property name="artCategorie" type="java.lang.Integer">
-            <column name="artCategorie" />
         </property>
     </class>
 </hibernate-mapping>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 18 nov. 2022 ? 11:50:08 by Hibernate Tools 4.3.6.Final -->
+<!-- Generated 18 nov. 2022 ? 13:52:38 by Hibernate Tools 4.3.6.Final -->
 <hibernate-mapping>
     <class name="models.Commande" table="Commande" catalog="kahoueh" optimistic-lock="version">
         <id name="cmdId" type="java.lang.Integer">

@@ -16,8 +16,8 @@
 			</div>
 		<ul class="nav-links">
 			<li><a href="http://localhost:8080/JEE2/accueil.jsp"> Accueil </a></li>
-			<li><a href="http://localhost:8080/JEE2/cafes.jsp"> Nos Cafés </a></li>
-			<li><a href="http://localhost:8080/JEE2/tasse.jsp"> Nos Tasses </a></li>
+			<li><a href="NosCafes"> Nos Cafés </a></li>
+			<li><a href="NosTasses"> Nos Tasses </a></li>
 			<li><a href="http://localhost:8080/JEE2/contact.jsp"> Contact </a></li>
 			<li><a href="http://localhost:8080/JEE2/panier.jsp"> Panier </a></li>
 			<li><a href="http://localhost:8080/JEE2/authentification.jsp"> <i class="fas fa-user"></i> </a></li>
@@ -25,113 +25,9 @@
 		</ul>
 		</div>
 	</nav>
-	
-<div class="parentB">
-
-	<div class="div1">
-	<div class="card">
-	<img class="photox1" src="https://graindesail.com/900-home_default/cafe-de-colombie-pitalito.jpg">
-	<div class="cardcontain">
-	<p class="textP">  Arabica : Café Origine Colombie </p>
-	<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">En grain</span> </p>
-		
-		<div class="divQP">
-		
-			<div class="btnQuantite">
-			<span class="minus">-</span>
-			<span class="num">01</span>
-			<span class="plus">+</span>
-			</div>
-			
-			<p style="text-align: right;">A partir de </p>    
-    		<h3 class="price">10.99 €</h3>
-			
-		</div>
-	</div>
-	</div>
-		<div class="ajouterPanier">
-			<input type="submit" value="Ajouter au panier">
-		</div> 	
-	</div>
-	
-	<div class="div2">
-	<div class="card">
-	<img class="photox1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg">
-	<div class="cardcontain">
-	<p class="textP">  Arabica: Café de Paris </p>
-	<p class="textMC"> <span class="marque">Désir du soir</span> <span class="catégorie">En grain</span> </p>
-		
-		<div class="divQP">
-		
-			<div class="btnQuantite">
-			<span class="minus">-</span>
-			<span class="num">01</span>
-			<span class="plus">+</span>
-			</div>
-			
-			<p style="text-align: right;">A partir de </p>    
-    		<h3 class="price">10.99 €</h3>
-			
-		</div>
-	</div>
-	</div>
-		<div class="ajouterPanier">
-			<input type="submit" value="Ajouter au panier">
-		</div> 
-	</div>
-	
-	<div class="div3b">
-	<div class="card">
-	<img class="photox1" src="https://factum-info.net/images/1_Fakty/5_Raznoe/34_2_kopi-luwak-1.jpg">
-	<div class="cardcontain">
-	<p class="textP">  Kowi Luwak: Café sensation Sahara </p>
-	<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">En grain</span> </p>
-		
-		<div class="divQP">
-		
-			<div class="btnQuantite">
-			<span class="minus">-</span>
-			<span class="num">01</span>
-			<span class="plus">+</span>
-			</div>
-			
-			<p style="text-align: right;">A partir de </p>    
-    		<h3 class="price">10.99 €</h3>
-			
-		</div>
-	</div>
-	</div>
-		<div class="ajouterPanier">
-			<input type="submit" value="Ajouter au panier">
-		</div>
-	</div>
-	
-	<div class="div4b">
-	<div class="card">
-	<img class="photox1" src="https://www.monsieurcafe.org/wp-content/uploads/2017/08/monsieur_cafe_guide_cafe_moulu.jpg">
-	<div class="cardcontain">
-	<p class="textP">  Robusta : Café </p>
-	<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">En grain</span> </p>
-		
-		<div class="divQP">
-		
-			<div class="btnQuantite">
-			<span class="minus">-</span>
-			<span class="num">01</span>
-			<span class="plus">+</span>
-			</div>
-			
-			<p style="text-align: right;">A partir de </p>    
-    		<h3 class="price">10.99 €</h3>
-			
-		</div>
-	</div>
-	</div>
-		<div class="ajouterPanier">
-			<input type="submit" value="Ajouter au panier">
-		</div>
-	</div>
-		
+	${result}
+<div class="parent">
+	${affichage}
 </div>
 <br> <br> <br>
 <div class="footer-dark">

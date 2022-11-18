@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,6 +34,7 @@ public class LoginServlet extends HttpServlet {
 		String id=request.getParameter("id");
 		String mdp=request.getParameter("mdp");
 		Utilisateur utilisateur = this.getUtilisateur(id, mdp);
+		final RequestDispatcher requestDispatcher = request.getRequestDispatcher("authentification.jsp");
 		if (utilisateur != null){
 			HttpSession session = request.getSession();
 			session.setAttribute("utilID", utilisateur.getUtilId());
@@ -46,7 +48,8 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("utilCB", utilisateur.getUtilCb());
 			response.sendRedirect("after/successAuthentification.jsp");
 		} else{
-			response.sendRedirect("after/failedAuthentification.jsp");
+			request.setAttribute("result", "<center><p style=\"color:wheat\";>L'identifiant ou le mot de passe est invalide !</p></center>");
+			requestDispatcher.forward(request, response);
 		}
 	}
 

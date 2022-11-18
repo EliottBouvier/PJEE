@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 18 nov. 2022 ? 11:50:08 by Hibernate Tools 4.3.6.Final -->
+<!-- Generated 18 nov. 2022 ? 13:52:38 by Hibernate Tools 4.3.6.Final -->
 <hibernate-mapping>
     <class name="models.Banque" table="Banque" catalog="kahoueh" optimistic-lock="version">
         <id name="id" type="int">
@@ -10,6 +10,12 @@
         </id>
         <property name="numCarte" type="string">
             <column name="numCarte" not-null="true" />
+        </property>
+        <property name="cvc" type="string">
+            <column name="cvc" not-null="true" />
+        </property>
+        <property name="expir" type="string">
+            <column name="expir" not-null="true" />
         </property>
         <property name="solde" type="float">
             <column name="solde" precision="12" scale="0" not-null="true" />

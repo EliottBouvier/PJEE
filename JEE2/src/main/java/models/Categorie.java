@@ -1,11 +1,15 @@
 package models;
-// Generated 18 nov. 2022 à 11:50:07 by Hibernate Tools 4.3.6.Final
+// Generated 18 nov. 2022 à 13:52:38 by Hibernate Tools 4.3.6.Final
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -17,12 +21,18 @@ public class Categorie implements java.io.Serializable {
 
 	private Integer catId;
 	private String catNom;
+	private Set<Article> articles = new HashSet<Article>(0);
 
 	public Categorie() {
 	}
 
 	public Categorie(String catNom) {
 		this.catNom = catNom;
+	}
+
+	public Categorie(String catNom, Set<Article> articles) {
+		this.catNom = catNom;
+		this.articles = articles;
 	}
 
 	@Id
@@ -44,6 +54,15 @@ public class Categorie implements java.io.Serializable {
 
 	public void setCatNom(String catNom) {
 		this.catNom = catNom;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categorie")
+	public Set<Article> getArticles() {
+		return this.articles;
+	}
+
+	public void setArticles(Set<Article> articles) {
+		this.articles = articles;
 	}
 
 }

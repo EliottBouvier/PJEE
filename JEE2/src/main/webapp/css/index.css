@@ -409,7 +409,6 @@ grid-column-gap: 10px;
 grid-row-gap: 20px;
 margin-top: 7%;
 }
-
 .parentB {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
