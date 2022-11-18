@@ -39,7 +39,7 @@ public class ContactServlet extends HttpServlet {
 		final RequestDispatcher dispatcher = request.getRequestDispatcher("/contact.jsp");
 		
 		if(prenom == "" || nom == "" || email == "" || contenu == "") {
-			request.setAttribute("result", "Un des champs est vide !");
+			request.setAttribute("result", "<center><p style=\"color:wheat\";>Un des champs est vide !</p></center>");
 			dispatcher.forward(request, response);
 			return;
 		}
@@ -56,7 +56,7 @@ public class ContactServlet extends HttpServlet {
         session.getTransaction().commit();
         session.close();
         
-        request.setAttribute("result", "Le message est bien envoyé !");
+        request.setAttribute("result", "<center><p style=\"color:wheat\";>Le message est bien envoyé !</p></center>");
         dispatcher.forward(request, response);
 	}
 

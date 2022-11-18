@@ -1,11 +1,14 @@
 package models;
-// Generated 18 nov. 2022 à 11:50:07 by Hibernate Tools 4.3.6.Final
+// Generated 18 nov. 2022 à 13:52:38 by Hibernate Tools 4.3.6.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -16,35 +19,35 @@ import javax.persistence.Table;
 public class Article implements java.io.Serializable {
 
 	private Integer artId;
+	private Categorie categorie;
+	private Marque marque;
 	private float artPrix;
 	private int artStock;
 	private String artImg;
 	private String artDesc;
 	private float artTauxTva;
-	private int artMarque;
-	private Integer artCategorie;
 
 	public Article() {
 	}
 
-	public Article(float artPrix, int artStock, String artImg, String artDesc, float artTauxTva, int artMarque) {
+	public Article(Marque marque, float artPrix, int artStock, String artImg, String artDesc, float artTauxTva) {
+		this.marque = marque;
 		this.artPrix = artPrix;
 		this.artStock = artStock;
 		this.artImg = artImg;
 		this.artDesc = artDesc;
 		this.artTauxTva = artTauxTva;
-		this.artMarque = artMarque;
 	}
 
-	public Article(float artPrix, int artStock, String artImg, String artDesc, float artTauxTva, int artMarque,
-			Integer artCategorie) {
+	public Article(Categorie categorie, Marque marque, float artPrix, int artStock, String artImg, String artDesc,
+			float artTauxTva) {
+		this.categorie = categorie;
+		this.marque = marque;
 		this.artPrix = artPrix;
 		this.artStock = artStock;
 		this.artImg = artImg;
 		this.artDesc = artDesc;
 		this.artTauxTva = artTauxTva;
-		this.artMarque = artMarque;
-		this.artCategorie = artCategorie;
 	}
 
 	@Id
@@ -57,6 +60,26 @@ public class Article implements java.io.Serializable {
 
 	public void setArtId(Integer artId) {
 		this.artId = artId;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "artCategorie")
+	public Categorie getCategorie() {
+		return this.categorie;
+	}
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "artMarque", nullable = false)
+	public Marque getMarque() {
+		return this.marque;
+	}
+
+	public void setMarque(Marque marque) {
+		this.marque = marque;
 	}
 
 	@Column(name = "artPrix", nullable = false, precision = 12, scale = 0)
@@ -102,24 +125,6 @@ public class Article implements java.io.Serializable {
 
 	public void setArtTauxTva(float artTauxTva) {
 		this.artTauxTva = artTauxTva;
-	}
-
-	@Column(name = "artMarque", nullable = false)
-	public int getArtMarque() {
-		return this.artMarque;
-	}
-
-	public void setArtMarque(int artMarque) {
-		this.artMarque = artMarque;
-	}
-
-	@Column(name = "artCategorie")
-	public Integer getArtCategorie() {
-		return this.artCategorie;
-	}
-
-	public void setArtCategorie(Integer artCategorie) {
-		this.artCategorie = artCategorie;
 	}
 
 }

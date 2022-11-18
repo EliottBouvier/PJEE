@@ -36,15 +36,15 @@ public class InscriptionServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		final String mail = request.getParameter("mail");
-		final String nom = request.getParameter("nom");
-		final String prenom = request.getParameter("prenom");
-		final String password = request.getParameter("password");
-		final String tel = request.getParameter("tel");
-		final String adresse = request.getParameter("adresse");
-		final String cp = request.getParameter("cp");
-		final String ville = request.getParameter("ville");
-		final String cb = request.getParameter("cb");
+		final String mail = request.getParameter("utilMail");
+		final String nom = request.getParameter("utilNom");
+		final String prenom = request.getParameter("utilPrenom");
+		final String password = request.getParameter("mdp");
+		final String tel = request.getParameter("utilTel");
+		final String adresse = request.getParameter("utilAddresse");
+		final String cp = request.getParameter("utilCP");
+		final String ville = request.getParameter("utilVille");
+		final String cb = request.getParameter("utilCB");
 		
 		if(mail == "" | nom == "" | prenom == "" | password == "" | tel == "" | adresse == "" | cp == "" | ville == "" | cb == "") {
 			/* TODO:
@@ -76,6 +76,7 @@ public class InscriptionServlet extends HttpServlet {
 			session.setAttribute("utilCP", utilisateur.getUtilCp());
 			session.setAttribute("utilVille", utilisateur.getUtilVille());
 			session.setAttribute("utilCB", utilisateur.getUtilCb());
+			response.sendRedirect("accueil.jsp");
 			return;
 		}
 		/* TODO:

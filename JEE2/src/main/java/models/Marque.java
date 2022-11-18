@@ -1,11 +1,15 @@
 package models;
-// Generated 18 nov. 2022 à 11:50:07 by Hibernate Tools 4.3.6.Final
+// Generated 18 nov. 2022 à 13:52:38 by Hibernate Tools 4.3.6.Final
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -17,12 +21,18 @@ public class Marque implements java.io.Serializable {
 
 	private Integer marqueId;
 	private String marqueNom;
+	private Set<Article> articles = new HashSet<Article>(0);
 
 	public Marque() {
 	}
 
 	public Marque(String marqueNom) {
 		this.marqueNom = marqueNom;
+	}
+
+	public Marque(String marqueNom, Set<Article> articles) {
+		this.marqueNom = marqueNom;
+		this.articles = articles;
 	}
 
 	@Id
@@ -44,6 +54,15 @@ public class Marque implements java.io.Serializable {
 
 	public void setMarqueNom(String marqueNom) {
 		this.marqueNom = marqueNom;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "marque")
+	public Set<Article> getArticles() {
+		return this.articles;
+	}
+
+	public void setArticles(Set<Article> articles) {
+		this.articles = articles;
 	}
 
 }

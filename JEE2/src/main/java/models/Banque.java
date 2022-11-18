@@ -1,5 +1,5 @@
 package models;
-// Generated 18 nov. 2022 à 11:50:07 by Hibernate Tools 4.3.6.Final
+// Generated 18 nov. 2022 à 13:52:38 by Hibernate Tools 4.3.6.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,14 +15,18 @@ public class Banque implements java.io.Serializable {
 
 	private int id;
 	private String numCarte;
+	private String cvc;
+	private String expir;
 	private float solde;
 
 	public Banque() {
 	}
 
-	public Banque(int id, String numCarte, float solde) {
+	public Banque(int id, String numCarte, String cvc, String expir, float solde) {
 		this.id = id;
 		this.numCarte = numCarte;
+		this.cvc = cvc;
+		this.expir = expir;
 		this.solde = solde;
 	}
 
@@ -44,6 +48,24 @@ public class Banque implements java.io.Serializable {
 
 	public void setNumCarte(String numCarte) {
 		this.numCarte = numCarte;
+	}
+
+	@Column(name = "cvc", nullable = false)
+	public String getCvc() {
+		return this.cvc;
+	}
+
+	public void setCvc(String cvc) {
+		this.cvc = cvc;
+	}
+
+	@Column(name = "expir", nullable = false)
+	public String getExpir() {
+		return this.expir;
+	}
+
+	public void setExpir(String expir) {
+		this.expir = expir;
 	}
 
 	@Column(name = "solde", nullable = false, precision = 12, scale = 0)
