@@ -33,7 +33,7 @@
 		<div class="card">
 		<img class="photox1" src="https://graindesail.com/900-home_default/cafe-de-colombie-pitalito.jpg">
 		<div class="cardcontain">
-		<input type="text" name="id" id="id" value="1" hidden>
+		<input type="text" name="id" id="id" value="2" hidden>
 		<p class="textP">  Arabica : Café Origine Colombie </p>
 			<p class="textMC"> <span class="marque">Désir du soir</span> <span class="catégorie">Bio</span> </p>
 			
@@ -58,43 +58,48 @@
 	</div>
 	
 	<div class="div2">
-	<div class="card">
-	<img class="photox1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg">
-	<div class="cardcontain">
-	<p class="textP">  Arabica: Café de Paris </p>
-	<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">En grain</span> </p>
-		
-		<div class="divQP">
-		
-			<div class="btnQuantite">
-			<span class="minus">-</span>
-			<span class="num">01</span>
-			<span class="plus">+</span>
-			</div>
-			
-			<p style="text-align: right;">A partir de </p>    
-    		<h3 class="price">10.99 €</h3>
-			
-		</div>
-	</div>
-	</div>
-		<div class="ajouterPanier">
-			<input type="submit" value="Ajouter au panier">
-		</div> 
+		<form method="post" action="ajoutPanierServlet">
+				<div class="card">
+				<img class="photox1" src="https://magazine.bellesdemeures.com/sites/default/files/styles/735x412/public/edito_migrate/article/image/cafe_en_grains_et_expresso.jpg">
+				<div class="cardcontain">
+				<p class="textP">  Arabica: Café de Paris </p>
+				<input type="text" name="id" id="id" value="3" hidden>
+				<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">En grain</span> </p>
+					
+					<div class="divQP">
+					
+						<div class="btnQuantite">
+						<span class="minus">-</span>
+						<input type="text" name="quantity" id="quantity" value="1" hidden><span class="num">01</span>
+						<span class="plus">+</span>
+						</div>
+						
+						<p style="text-align: right;">A partir de </p>    
+			    		<h3 class="price">10.99 €</h3>
+						
+					</div>
+				</div>
+				</div>
+					<div class="ajouterPanier">
+						<input type="submit" value="Ajouter au panier">
+					</div> 
+		</form>
 	</div>
 	
 	<div class="div3">
-	<div class="card">
+	<form method="post" action="ajoutPanierServlet">
+			<div class="card">
 	<img class="photox1" src="https://factum-info.net/images/1_Fakty/5_Raznoe/34_2_kopi-luwak-1.jpg">
 	<div class="cardcontain">
 	<p class="textP">  Kowi Luwak: Café sensation Sahara </p>
+	<input type="text" name="id" id="id" value="4" hidden>
 	<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">Bio</span> </p>
 		
 		<div class="divQP">
 		
 			<div class="btnQuantite">
 			<span class="minus">-</span>
-			<span class="num">01</span>
+			<input type="text" name="quantity" id="quantity" value="1" hidden><span class="num">01</span>
 			<span class="plus">+</span>
 			</div>
 			
@@ -106,21 +111,24 @@
 	</div>
 		<div class="ajouterPanier">
 			<input type="submit" value="Ajouter au panier">
-		</div>
+		</div>	
+	</form>
 	</div>
 	
 	<div class="div4">
-	<div class="card">
+	<form method="post" action="ajoutPanierServlet">
+		<div class="card">
 	<img class="photox1" src="https://www.monsieurcafe.org/wp-content/uploads/2017/08/monsieur_cafe_guide_cafe_moulu.jpg">
 	<div class="cardcontain">
 	<p class="textP">  Robusta : Café </p>
+	<input type="text" name="id" id="id" value="5" hidden>
 	<p class="textMC"> <span class="marque">Désir du soir</span> <span class="catégorie">Moulus</span> </p>
 		
 		<div class="divQP">
 		
 			<div class="btnQuantite">
 			<span class="minus">-</span>
-			<span class="num">01</span>
+			<input type="text" name="quantity" id="quantity" value="1" hidden><span class="num">01</span>
 			<span class="plus">+</span>
 			</div>
 			
@@ -133,20 +141,23 @@
 		<div class="ajouterPanier">
 			<input type="submit" value="Ajouter au panier">
 		</div>
+	</form>
 	</div>
 	
 	<div class="div5">
-	<div class="card"> 
+	<form>
+		<div class="card"> 
 	<img class="photox1" src="https://media1.coffee-webstore.com/img/cms/Blog/2020/11%20-%20NOVEMBRE/caf%C3%A9-en-grains-espresso.jpg">
 	<div class="cardcontain">
 	<p class="textP">  Arabica : café matin légé </p>
+	<input type="text" name="id" id="id" value="6" hidden>
 	<p class="textMC"> <span class="marque">Eco+</span> <span class="catégorie">Moulus</span> </p>
 		
 		<div class="divQP">
 		
 			<div class="btnQuantite">
 			<span class="minus">-</span>
-			<span class="num">01</span>
+			<input type="text" name="quantity" id="quantity" value="1" hidden><span class="num">01</span>
 			<span class="plus">+</span>
 			</div>
 			
@@ -159,20 +170,23 @@
 		<div class="ajouterPanier">
 			<input type="submit" value="Ajouter au panier">
 		</div>
+	</form>
 	</div>
 	
 	<div class="div6">
-	<div class="card">
+	<form>
+			<div class="card">
 	<img class="photox1" src="https://occitanie-cafe.fr/img/cms/cafe-bio-machine-tasse-grain-capsule-occitanie.jpg"> 
 	<div class="cardcontain">
 	<p class="textP">  Robusta: Café noir corsé </p>
+	<input type="text" name="id" id="id" value="7" hidden>
 	<p class="textMC"> <span class="marque">Désir du soir</span> <span class="catégorie">En grain</span> </p>
 		
 		<div class="divQP">
 		
 			<div class="btnQuantite">
 			<span class="minus">-</span>
-			<span class="num">01</span>
+			<input type="text" name="quantity" id="quantity" value="1" hidden><span class="num">01</span>
 			<span class="plus">+</span>
 			</div>
 			
@@ -185,6 +199,7 @@
 		<div class="ajouterPanier">
 			<input type="submit" value="Ajouter au panier">
 		</div>
+	</form>
 	</div>
 	
 </div>
