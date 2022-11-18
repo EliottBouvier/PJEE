@@ -11,7 +11,7 @@
 	<nav>
 		<div class="nav-content">
 			<div class="logo">
-				<a href="#"> Kahoueh. </a>
+				<a href="http://localhost:8080/JEE2/inscription.jsp"> Kahoueh. </a>
 			</div>
 		<ul class="nav-links">
 			<li><a href=""> Accueil </a></li>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Authentification</title>
+<title>Inscription</title>
 <link rel="stylesheet" type="text/css" href="http://localhost:8080/JEE2/css/index.css">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -26,31 +26,56 @@
 		</div>
 	</nav>
 	
-<div class="container1">
+<div class="container12">
 	${result}
-    <div class="title"><span>Nous Contacter </span></div>
+    <div class="title2"><span>Inscriptions </span></div>
     <form name="Enregistrement" method="post" action="ContactServlet">
     
         <div class="user-details">
 
             <div class="input-box">
                 <span class="details">Nom</span>
-                <input type="text" name="nom" placeholder="Entrez votre nom" maxlength="20">
+                <input type="text" name="utilNom" placeholder="Entrez votre nom" maxlength="20">
             </div>
 
             <div class="input-box">
                 <span class="details">Prenom</span>
-                <input type="text" name="prenom" placeholder="Entrez votre Prenom" maxlength="20">
+                <input type="text" name="utilPrenom" placeholder="Entrez votre Prenom" maxlength="20">
             </div>
 
             <div class="input-box">
                 <span class="details">Email</span>
-                <input type="email" name="email"  placeholder="Entrez votre mail">
+                <input type="email" name="utilMail"  placeholder="Entrez votre mail">
             </div>
-
+            
             <div class="input-box">
-                <span class="details">Votre message</span>
-                <textarea name="contenu" placeholder="Entrez votre message" required></textarea>
+                <span class="details">Mot de passe</span>
+                <input type="password" name="mdp"  placeholder="Entrez votre mot de passe">
+            </div>
+     
+            <div class="input-box">
+                <span class="details">Numéro de téléphone</span>
+                <input type="tel" name="utilTel"  placeholder="Entrez votre numéro de téléphone ">
+            </div>
+            
+            <div class="input-box">
+                <span class="details">Addresse</span>
+                <input type="text" name="utilAddresse"  placeholder="Entrez votre addresse">
+            </div>
+            
+            <div class="input-box">
+                <span class="details">Ville</span>
+                <input type="text" name="utilVille"  placeholder="Entrez votre ville">
+            </div>
+            
+            <div class="input-box">
+                <span class="details">Code postal</span>
+                <input type="number" name="utilCP"  placeholder="Entrez votre code postal">
+            </div>
+            
+            <div class="input-box">
+                <span class="details">Carte Bancaire</span>
+                <input type="text" name="utilCB"  placeholder="Entrez votre carte bancaire">
             </div>
 
         </div>
