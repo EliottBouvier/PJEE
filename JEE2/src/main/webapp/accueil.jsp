@@ -25,6 +25,7 @@
 		</div>
 	</nav>
 	
+<<<<<<< Updated upstream
 <div class="carousel">
   <div class="carousel-inner">
     <!-- Bloc images 1 -->
@@ -177,10 +178,12 @@
 <br>
 <br>
 <br>
+=======
+>>>>>>> Stashed changes
 
 <div class="footer-dark">
         <footer>
-            <div class="container">
+            <div class="tcontainer">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Nos réseaux</h3>
@@ -193,7 +196,6 @@
                     </div>
                     <div class="col-md-6 item text" id='about'>
                         <h3>Kahoueh Industries</h3>
-                        <p>.</p>
                     </div> 
                 </div>
                 <p class="copyright"> Kahoueh Industries © 2022  </p>

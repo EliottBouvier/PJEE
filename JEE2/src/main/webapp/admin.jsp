@@ -39,6 +39,7 @@
   <p>Clients</p>
 
 <table class="tftable" border="1">
+<<<<<<< Updated upstream
 <tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Adresse</th><th>Numéro de Tel</th><th>Code Postal</th><th>Ville</th><th>Modifier</th></tr>
 <tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td><td>Row:1 Cell:6</td><td>Row:1 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Retirer du panier"></div></form> </td></tr>
 <tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td><td>Row:2 Cell:6</td><td>Row:2 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Retirer du panier"></div></form> </td></tr>
@@ -52,6 +53,20 @@
 </table>
 		
   
+=======
+<tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Adresse</th><th>Numéro de Tel</th><th>Code Postal</th><th>Ville</th> <th>Modification</th></tr>
+<tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td><td>Row:1 Cell:6</td><td>Row:1 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Modifier du panier"></div></form></td></tr>
+<tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td><td>Row:2 Cell:6</td><td>Row:2 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Modifier du panier"></div></form></td></tr>
+<tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td><td>Row:3 Cell:6</td><td>Row:3 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Modifier du panier"></div></form></td></tr>
+<tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td><td>Row:4 Cell:6</td><td>Row:4 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Modifier du panier"></div></form></td></tr>
+<tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td><td>Row:5 Cell:6</td><td>Row:5 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Modifier du panier"></div></form></td></tr>
+<tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td><td>Row:6 Cell:6</td><td>Row:6 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Modifier du panier"></div></form></td></tr>
+<tr><td>Row:7 Cell:1</td><td>Row:7 Cell:2</td><td>Row:7 Cell:3</td><td>Row:7 Cell:4</td><td>Row:7 Cell:5</td><td>Row:7 Cell:6</td><td>Row:7 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Modifier du panier"></div></form></td></tr>
+<tr><td>Row:8 Cell:1</td><td>Row:8 Cell:2</td><td>Row:8 Cell:3</td><td>Row:8 Cell:4</td><td>Row:8 Cell:5</td><td>Row:8 Cell:6</td><td>Row:8 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Modifier du panier"></div></form></td></tr>
+<tr><td>Row:9 Cell:1</td><td>Row:9 Cell:2</td><td>Row:9 Cell:3</td><td>Row:9 Cell:4</td><td>Row:9 Cell:5</td><td>Row:9 Cell:6</td><td>Row:9 Cell:7</td><td><form id="form-1"><div class="row button"><input type="submit" value="Modifier du panier"></div></form></td></tr>
+</table>
+ 
+>>>>>>> Stashed changes
 </div>
 
 </div>
